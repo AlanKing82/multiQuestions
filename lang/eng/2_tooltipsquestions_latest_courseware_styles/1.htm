@@ -24,7 +24,7 @@
         <div class="whiteBox">
             <div class="boxContent">
                 <div class="t"></div>
-                <h1>Question</h1>
+                <h1>Question - mustBeCorrect enabled</h1>
                 <p>Which of the following promote sitting correctly?</p>
                 <dl class="noteExpand expandMiddle">
                     <dd class="interact_img"></dd><dt>Interact</dt>
@@ -77,8 +77,7 @@
                 'afterFx': function() {
                     parent.$(".answer", frame).questions({
                         'answersCount': '3',
-                        'type': 'modal',
-                        'mustBeCorrect' : false
+                        'type': 'modal'
                     });
                 }
             });

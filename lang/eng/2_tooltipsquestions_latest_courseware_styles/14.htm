@@ -1,53 +1,124 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-<meta http-equiv="Author" content="EssentialSkillz TM" />
-<meta http-equiv="Description" content="Online training course" />
-<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Simple yes/no radio buttons - (Apr2016)</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
-</head>
-<body id="screenBody" onload="parent.onFrameLoad();"><div class="introFx fx2 width50" id="whiteBoxWrap">
-<div class="whiteBox">
-<div class="boxContent">
-<div class="t"></div>
-<h1>Responsibilities &ndash; dutyholder</h1>
-<p>Your organisation should have appointed a dutyholder, whose responsibility it is to consider the risks from legionella. Do you know who your dutyholder is?</p>
-<div class="questionBox width90"><dl class="noteExpand expandShort">
-<div class="interact_img"></div>
-<dt>Interact</dt><dd>Select an answer.</dd></dl>
-<ul>
-<li><input name="a" title="Click if this is true." class="answer" id="answer1" type="radio" rel="correct" /> <label>Yes</label></li>
-<li><input name="a" title="Click if this is true." class="answer" id="answer2" type="radio" rel="incorrect" /> <label>No</label></li>
-</ul>
-</div>
-<div class="cleaner"></div>
-</div>
-<div class="b">
-<div></div>
-</div>
-</div>
-</div>
-<div class="whiteboxFeedback" style="left: 150px; top: 250px; width: 300px; position: absolute;">
-<div class="final_result" id="correct">
-<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
-Well done. Remember to let the dutyholder know if you have any concerns or questions. Please continue.</div>
-<div class="final_result warning" id="incorrect">
-<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
-You need to find out who the dutyholder for legionella is in your organisation. Ask your manager or supervisor. Please continue.</div>
-</div>
-<img width="675" height="390" class="introFx fx1" id="bg" alt="A woman with clipboard." src="../../../media/dutyholder.jpg" />
-<script type="text/javascript">// <![CDATA[
-var activity = 1;    
-if (parent.$) {        
-    var frame = parent.$("#myFrame").contents();  
-parent.$(".hotspotsMinor a", frame).hotspotMinor();      
-        parent.$('.introFx', frame).introFx({
-            'afterFx': function() {
-                parent.$(".answer", frame).questions({'mustBeCorrect':0}); 
-            }
-        });
+    <meta http-equiv="Author" content="EssentialSkillz TM" />
+    <meta http-equiv="Description" content="Online training course" />
+    <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Checkboxes layout left - (Apr2015)</title>
+    <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+    <style type="text/css">
+        <!-- #whiteBoxWrap .spcBullets LI {
+            PADDING-BOTTOM: 3px;
+            PADDING-LEFT: 5px;
+            PADDING-RIGHT: 0px;
+            PADDING-TOP: 0px
+        }
+        -->
+        
+
+        
+.btn#questionSubmit {
+    position:relative;
+    float:right;
+    margin-right:25px;
+    padding-right:25px;
+    visibility:visible;
+    z-index: 1;
+    
+    background: #ddd url(../../../common_images/tick_small.png) no-repeat 97%;
+    background-size: 18px 18px;
+    cursor:pointer;
 }
-// ]]></script></body>
+        
+.btn#questionSubmit:disabled{
+  opacity: 0.65; 
+  cursor: not-allowed;
+  padding-right:14px;
+  margin-right:14px;    
+  background: #ddd;
+  margin-right:25px;
+}
+    </style>
+</head>
+
+<body id="screenBody" onload="parent.onFrameLoad();">
+    <div class="width100 introFx fx2" id="whiteBoxWrap">
+        <div class="whiteBox">
+            <div class="boxContent">
+                <div class="t"></div>
+                <h1>Question - mustBeCorrect enabled</h1>
+                <p>Which of the following promote sitting correctly?</p>
+                <dl class="noteExpand expandMiddle">
+                    <dd class="interact_img"></dd><dt>Interact</dt>
+                    <dd>Click on the checkboxes beside the correct statements. (Hint: 3 are correct)</dd>
+                </dl>
+                <div class="questionBox">
+                    <ul class="spcBullets" style="margin: 0px; padding: 0px; border: 1px solid #ffffff; line-height: 1.2em;">
+                        <li>
+                            <input name="a" title="Click if this is true." class="answer" id="answer1" rel="correct" value="on" type="checkbox" />
+                            <label>When your chair is set at the correct height, your wrists and forearms are horizontal with the desk and keyboard.</label>
+                        </li>
+                        <li>
+                            <input name="a" title="Click if this is true." class="answer" id="answer2" rel="incorrect" value="on" type="checkbox" />
+                            <label>When your chair is set at the correct height, your feet should be resting just above the floor.</label>
+                        </li>
+                        <li>
+                            <input name="a" title="Click if this is true." class="answer" id="answer3" rel="correct" value="on" type="checkbox" />
+                            <label>Clutter under the desk can cause you to sit awkwardly.</label>
+                        </li>
+                        <li>
+                            <input name="a" title="Click if this is true." class="answer" id="answer4" rel="correct" value="on" type="checkbox" />
+                            <label>The chair&rsquo;s backrest should support the lower inward curve of your back.</label>
+                        </li>
+                        
+                    </ul>
+                    <input class="btn" id="questionSubmit" value="submit" type="button" disabled/>
+                </div>
+                <div class="cleaner"></div>
+            </div>
+            <div class="b">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="whiteboxFeedback" style="left: 380px; top: 300px; width: 200px; position: absolute;">
+        <div class="final_result" id="correct">
+            <div title="Close" class="closeWindow">close<span></span></div>
+            <span>Correct.</span>
+            <br />Please continue.</div>
+        <div class="final_result" id="incorrect">
+           <div title="Close" class="closeWindow">close<span></span></div>
+           <span>Incorrect.</span>
+            <br />Try again.</div>
+    </div>
+    <img src="../../../media/question_background.jpg" id="bg" class="introFx fx1" alt="A lit lightbulb." height="390" width="675" />
+    <script type="text/javascript">
+        // <![CDATA[
+        var activity = 1;
+        if (parent.$) {
+            var frame = parent.$("#myFrame").contents();
+            
+         
+            
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".answer", frame).questions({
+                        'answersCount': '3',
+                        'type': 'modal',
+                        'submit': true
+                    });
+                }
+            });
+            
+       
+        }
+         // ]]>
+    </script>
+</body>
+
 </html>
