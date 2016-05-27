@@ -1,0 +1,2171 @@
+/* $Rev: 7524 $ $Date: 2016-04-13 11:18:30 +0100 (Wed, 13 Apr 2016) $ $Author: jan $ */
+html
+{
+	height:100%;
+}
+
+body
+{
+	/*background-color:#FFF;*/
+	color:#000;
+	font-family:Arial,Helvetica,sans-serif!important;
+	font-size: 75% !important;
+	margin:0;
+	padding:0;
+}
+
+a
+{
+	color:#305dc1;
+}
+
+a:visited
+{
+	color:#305dc1;
+}
+
+a img
+{
+	border:0;
+}
+
+p
+{
+	margin:0 0 1em;
+}
+
+h1
+{
+	font-size:120%;
+	margin-top:0;
+	color: #8BA4A9;
+}
+
+h1.withBackground { 
+    background: url(../common_images/header_background.png) no-repeat 0 0; 
+    line-height: 1.7em;
+    padding-left: 15px;
+    color: #6192B2;
+}
+
+h1.withBackgroundShort { 
+    background: url(../common_images/header_background_short.png) no-repeat 0 0; 
+    line-height: 1.7em;
+    padding-left: 15px;
+    color: #6192B2;
+}
+
+h2,h3,h4,h5
+{
+	font-size:100%;
+	margin-top:0;
+}
+
+img
+{
+	float:right;
+	position:relative;
+}
+
+ul li
+{
+	background:url(../common_images/list_item_bullet.gif) 0 .2em no-repeat;
+	list-style:none;
+	/*padding-left:20px;*/
+	padding: 0px 0px 8px 20px;
+}
+
+.mgnBullets li
+{
+	margin-bottom:7px;
+}
+
+.mgnBullets2 li
+{
+	margin-bottom:5px;
+}
+
+.spcBullets li
+{
+padding: 0px 0px 1px 20px;
+}
+
+.spcBullets2 li
+{
+	padding: 0px 0px 4px 20px;
+}
+
+ul li ul li
+{
+	background:none;
+	list-style:disc;
+	margin-left:.7em;
+	padding:0;
+}
+
+ul li ul li ul li
+{
+	list-style:circle;
+}
+
+ul
+{
+	list-style:none;
+	margin:0 0 1em 1em;
+	padding:0;
+}
+
+.mceContentBody a
+{
+	color:red!important;
+}
+
+.mceContentBody p
+{
+	margin:0;
+}
+
+.text,.textRight
+{
+	width:49%;
+}
+
+.text img
+{
+	float:none;
+}
+
+.textLong,.text,.textRight, .content
+{
+	/*background:transparent url(../common_images/text_bg.gif) repeat-x top left;*/
+	padding:20px 20px 0;
+}
+
+
+.imageLeft
+{
+	float:left;
+}
+
+.textRight
+{
+	float:right;
+}
+
+.notDisplay,.imgSwitchShow,#wideImgToBg
+{
+	display:none;
+	height:0;
+	visibility:hidden;
+	width:0;
+
+}
+
+.cleaner
+{
+	clear:both;
+}
+
+.size4
+{
+	width:24%;
+}
+
+.size3
+{
+	width:32%;
+}
+
+.size2
+{
+	width:49%;
+}
+
+.noBottomMargin
+{
+	margin-bottom:0;
+}
+
+.width100
+{
+	width:100%;
+}
+
+.width95
+{
+	width:95%;
+}
+
+.width90
+{
+	width:90%;
+}
+
+.width85
+{
+	width:85%;
+}
+
+.width80
+{
+	width:80%;
+}
+
+.width75
+{
+	width:75%;
+}
+
+.width70
+{
+	width:70%;
+}
+
+.width65
+{
+	width:65%;
+}
+
+.width60
+{
+	width:60%;
+}
+
+.width55
+{
+	width:55%;
+}
+
+.width50
+{
+	width:50%;
+}
+
+.width45
+{
+	width:45%;
+}
+
+.width40
+{
+	width:40%;
+}
+
+.width35
+{
+	width:35%;
+}
+
+.width30
+{
+	width:30%;
+}
+
+.width25
+{
+	width:25%;
+}
+
+.width20
+{
+	width:20%;
+}
+
+#endMessage
+{
+	background-color:#e3f5ff;
+	border:1px solid #a5c7d7;
+	bottom:0;
+	display:none;
+	font-size:85%;
+	padding:3px;
+	position:absolute;
+	right:0;
+}
+
+#hotspotImage
+{
+	float:none;
+}
+
+.hotspots
+{
+	margin:0;
+}
+
+/* Transparent image is a hack for IE 6/7 browsers to make the spot area clickable */
+.hotspots a
+{
+	background: url(../common_images/transparent.gif) repeat top left;
+	display:block;
+	position:absolute;
+	z-index:400;
+}
+
+.hotspots dd
+{
+	display:none;
+}
+
+.hotspots span
+{
+	display:none;
+}
+
+#hotspotWindow,#hotspotHelpWindow,#endWindow
+{
+	background:#fff;
+	border:#000 3px solid;
+	display:none;
+	height:225px;
+	left:100px;
+	padding:5px;
+	position:absolute;
+	top:88px;
+	width:445px;
+	z-index:500;
+}
+
+.hotspotCheck
+{
+	background-image:url(../common_images/correct2.gif);
+	height:50px;
+	position:absolute;
+	width:47px;
+}
+
+.hotspotCheckFalse
+{
+	background-image:url(../common_images/incorrect.gif);
+	height:50px;
+	position:absolute;
+	width:47px;
+}
+
+.hotspotCloseWindow
+{
+	float:right;
+	position:relative;
+}
+
+.hotspotCloseWindow,.hotspotCloseWindow span
+{
+	height:35px;
+	width:37px;
+}
+
+.hotspotCloseWindow span
+{
+	background-image:url(../common_images/close.gif);
+	left:0;
+	position:absolute;
+	top:0;
+}
+
+.hotspotHelpButton
+{
+	background-color:#ece05a;
+	position:absolute;
+	right:40px;
+	top:25px;
+	visibility:hidden;
+	width:100px;
+	z-index:440;
+}
+
+#hotspotUiBlocker
+{
+	background-color:#000;
+	display:none;
+	left:13px;
+	opacity:0.4;
+	filter: alpha(opacity=40) !important; /*for IE*/
+	position:absolute;
+	top:52px;
+	z-index:450;
+}
+
+#hotspotHelpWindow
+{
+	display:none;
+}
+
+.hotspotHighlight
+{
+	border:3px solid red;
+}
+
+#incorrect,#correct,.modalWindow #incorrect,.modalWindow #correct, #attemptsOver
+{
+	background:no-repeat 10px;
+	display:none;
+	font-size:130%;
+	font-weight: bold;
+	height:50px;
+	margin-top:.5em;
+	min-height:44px;
+	padding:.2em .5em .2em 50px;
+	text-align:center;
+}
+
+.modalWindow #incorrect,.modalWindow #correct,.modalWindow #attemptsOver
+{
+	border:0;
+	display:block;
+	margin:0;
+}
+
+#incorrect span,#correct span,#attemptsOver span, #attemptsOver
+{
+	color:#000;
+}
+
+#incorrect p,#correct p,#attemptsOver p
+{
+	color:#000;
+	display:inline;
+	font-size:80%;
+	font-weight:400;
+}
+
+#incorrect
+{
+	background-image:url(../common_images/incorrect.gif) !important;
+}
+
+#correct
+{
+	background-image:url(../common_images/correct2.gif) !important;
+}
+
+.questionsAgree
+{
+	bottom:40px;
+	font-size:140%;
+	font-weight:700;
+	padding:0;
+	position:absolute;
+	right:0;
+	text-align:center;
+	width:280px;
+}
+
+.questionsList
+{
+	margin:1em 0 0;
+}
+
+.questionsList label
+{
+	float:right;
+	width:90%;	
+	padding-bottom: 6px;
+}
+
+.text .questionsList label
+{
+	width:85%;
+}
+
+.questionsList label:hover
+{
+	background-color:#e8f0fa;
+}
+
+.questionsList input
+{
+	display:block;
+	float:left;
+	width:5%;
+}
+
+.questionsList li
+{
+	background:none;
+	list-style:none;
+	list-style-image:none;
+	padding: 0 0 24px 20px;
+	font-weight: bold;
+}
+
+.questionsImages
+{
+	margin:0;
+	padding:0;
+}
+
+.questionsImages li
+{
+	background:none;
+	display:block;
+	float:left;
+	list-style:none;
+	list-style-image:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	position:relative; /*IE6 image display needed when used in whiteBox div*/
+}
+
+.questionsImages label
+{
+	display:block;
+	font-weight: bold;
+}
+
+.questionIcon {
+	background-image:url(../common_images/question_icon.png);
+	height:90px;
+	position:absolute;
+	width:109px;
+	right: 0px;
+	top: 10px;
+	z-index: -10;
+}
+
+.questionNote {
+	padding-left: 16px;
+}
+
+.optionsList
+{
+	margin:1em 0 0;
+}
+
+table.optionsList { padding-left: 12px; }
+
+.optionsList label
+{
+	background-color:#f4f9ff;
+	float:left;
+	font-size:100% !important;
+	font-weight:bold !important;
+	margin-bottom:3px;
+	padding:.3em;
+	text-align:left;
+	width:99%;
+}
+
+td.questionNumber 
+{
+	vertical-align: top; 
+	font-size:100% !important;
+	font-weight:bold !important;
+	padding-top:.4em;
+}
+
+.text .optionsList label
+{
+	width:100%;
+}
+
+.optionsList label:hover
+{
+	background-color:#e8f0fa;
+}
+
+.optionsList input
+{
+	display:block;
+	margin-left:15px;
+}
+
+.optionsList li
+{
+	background:none;
+	font-size:110%;
+	list-style:none;
+	list-style-image:none;
+}
+
+/* multiquestion incorrect/correct feedback for more than two option columns */
+.optionsListCorrect{
+    background-color: #f2ffe9;
+    border-radius: 5px;
+}
+
+.optionsListIncorrect{
+    background-color: #ffe9e9;
+    border-radius: 5px;
+}
+
+.optionsListIncorrectImg,.optionsListCorrectImg{
+	height:21px;
+    width:21px;
+    z-index: 1;
+    position:absolute;
+    display:block;
+    margin-left: -6px;
+    left:0px;
+}
+
+.optionsListCorrectImg{
+    background-image:url(../common_images/tick_small.png);
+}
+
+.optionsListIncorrectImg{
+    background-image:url(../common_images/x_small.png);
+}
+
+.bulbs dd
+{
+	display:none;
+}
+
+.bulbsText dd
+{
+	margin:0 0 .5em .2em;
+}
+
+.bulbsText .bulbClicked
+{
+	color:#7b7b7b;
+}
+
+.ulIcon a
+{
+	color:#fff;
+	font-size:50px;
+	line-height:70px;
+	margin-right:40px;
+	text-align:center;
+	text-decoration:none;
+}
+
+.bulbsLight
+{
+	margin:15px 0 0;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+
+.bulbsLight dt
+{
+	float:left;
+}
+
+.bulbsLight dd
+{
+	left:0;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:65px;
+}
+
+.bulbsLight dt a
+{
+	background:transparent url(../common_images/tip.png) no-repeat 0 0;
+	display:block;
+	height:32px;
+	width:32px;
+}
+
+
+
+.bulbsLight dt span
+{
+	display:none;
+}
+
+.bulbsLight .bulbClicked
+{
+	background-position:0 -32px;
+}
+
+p.bulbImage
+{
+	background-color:#e3eff5;
+	padding:.5em;
+}
+
+.largetabs dd
+{
+	display:none;
+}
+
+.tabulIcon a
+{
+	color:#fff;
+	font-size:17px;
+	line-height:20px;
+	margin-right:0;
+	text-align:center;
+	text-decoration:none;
+}
+
+.largetabsText dd
+{
+	margin:0 0 .5em .2em;
+}
+
+.largetabsText .largetabClicked
+{
+	color:#7b7b7b;
+}
+
+.largetabsLight
+{
+	margin:15px 0 0;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+
+.largetabsLight dt
+{
+	float:left;
+	margin-right:20px;
+	width:150px;
+}
+
+.largetabsLight dd
+{
+	left:0;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:100px;
+}
+
+.largetabsLight dt a
+{
+	background:transparent url(../common_images/tip2.png) no-repeat 0 0;
+	display:block;
+	font-size:15px;
+	font-weight:700;
+	height:65px;
+	padding:20px 5px 0;
+}
+
+.largetabsLight dt span
+{
+	display:none;
+}
+
+.largetabsLight .largetabClicked
+{
+	background-position:0 -98px;
+}
+
+p.largetabImage
+{
+	background-color:#e3eff5;
+	padding:.5em;
+}
+
+/* Rounded tabs Activity*/
+.tabs dd
+{
+	display:none;
+}
+
+
+
+.tabsText .tabClicked
+{
+	color:#7b7b7b;
+}
+
+
+
+.tabsRounded
+{
+	margin:10px 0 10px 0;
+	padding:0;
+	position:relative;
+	width:320px;
+
+}
+
+.tabsRounded dt
+{
+    float:none;
+	margin:0;
+}
+
+.tabsRounded dd
+{
+    position:absolute;
+	margin:0;
+	padding:0;
+	left:360px;
+	top:0px;
+	width:100%;
+	BACKGROUND: url(../common_images/notepad_bg.jpg) no-repeat;
+	width:210px;
+	height:195px; 
+	padding:15px 15px 0px 30px;
+
+}
+
+.tabsRounded dd h2{
+	font-family: Comic Sans MS, Arial, Helvetica, sans-serif;
+	color:#5F92B1;
+	font-style: italic;
+	font-size:12pt;
+}
+
+.tabsRounded dt a
+{
+	background:transparent url(../common_images/tab_01.jpg) no-repeat 0 0;
+	display:block;
+	width:295px;
+    height:31px;
+	font-family: Arial Rounded MT Bold, Arial, Helvetica, sans-serif;
+	font-size:1.3em;
+	color:#ffffff;
+	padding:7px 0 0 25px;
+	text-decoration: none;
+}
+
+.tabsRounded  dt a:hover {
+BACKGROUND: url(../common_images/tab_01_hover.jpg) no-repeat;
+    display:block;
+    width:295px;
+    height:31px;
+font-family: Arial Rounded MT Bold, Arial, Helvetica, sans-serif;
+
+
+color:#ffffff;
+padding:7px 0 0 25px;
+}
+
+.tabsRounded .roundedtabClicked
+{
+	background-position:0 -38px;
+
+}
+
+/* Accordion Activity*/
+.accord dd {
+    display:none;
+}
+
+
+.accord dt a {
+    background:transparent url(../common_images/accordion_tab_03.jpg) no-repeat 0 0;
+    display:block;
+    width:620px;
+    height:20px;
+color:#ffffff;
+	text-decoration:none;
+	padding:8px 0 0 10px;
+	font-weight:bold;
+}
+
+
+
+.accord dd {
+	margin:2px 0 0 10px;
+	width:620px;
+	padding:0;
+	
+
+}
+.accord .accordClicked {
+    color:#ffffff;
+}
+
+
+.objectivesBody
+{
+	background:#fff url(../common_images/objectives_bg.jpg) no-repeat top right;
+}
+.summaryBody
+{
+	background:#fff url(../common_images/summary_bg.jpg) no-repeat top right;
+}
+
+#objectives
+{
+	width: 60%;
+	padding:8px 16px 0;
+}
+
+#objectives ul
+{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#objectives li
+{
+	background:url(../common_images/list_item_bullet.gif) 0 .2em no-repeat;
+	list-style:none;
+	list-style-image:none;
+	padding: 0px 0px 8px 20px;
+}
+
+#objectives_wrapper{padding:12px 4px 0}
+
+.modalWindow
+{
+	display:none;
+	left:10%;
+	position:absolute;
+	top:0;
+	width:80%;
+	z-index:500;
+}
+
+.modalWindow .content
+{
+	background:#fff;
+	border:#000 3px solid;
+	padding:5px;
+}
+
+.uiBlocker
+{
+	background-color:#fff;
+	display:none;
+	filter:alpha(opacity=70); /*IE*/
+	height:374px;
+	left:0;
+	opacity:0.7;
+	position:absolute;
+	top:0;
+	width:675px;
+	z-index:450;
+}
+
+.i18n
+{
+	background:0!important;
+	display:inline!important;
+	margin:0!important;
+	padding:0!important;
+}
+
+.pageTitle
+{
+	color:#004890;
+	font-weight:700;
+}
+
+.ContinueText
+{
+	color:#666;
+	font-style:italic;
+	font-weight:700;
+	text-align:right;
+}
+
+.ulDesc p
+{
+	line-height:20px;
+	overflow:hidden;
+}
+
+/* Sortable Tabs */
+#sort-list li
+{
+	background:#BDEDFF;
+	display:block;
+	list-style:none;
+	margin-bottom:10px;
+	padding:1px 10px;
+}
+
+div#sortWrap ol.itemHeightSmall li{
+    padding: 1px 35px 1px 28px;
+}
+
+div#sortWrap ol.itemHeightMedium li{
+    padding: 3px 35px 3px 28px;
+}
+
+div#sortWrap ol {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+}
+
+div#sortWrap ol li{
+    position: relative;
+    padding: 4px 35px 5px 28px;
+    margin: 0px 20px 3px 20px; 
+    visibility: hidden;  
+    color: #000;
+    text-decoration: none;
+    border-radius: .5em;
+    transition: background-position .3s ease-out;
+    background: #ddd url(../common_images/sortable.png) no-repeat 1.5% 50%;
+    *zoom:0 !important; /* ie6/ie7 first tab format fix */
+}
+
+div#sortWrap ol li:hover{
+    background: #d0d0d0 url(../common_images/sortable_hover.png) no-repeat 1.5% 50%;
+}
+
+div#sortWrap ol li.sort{
+    counter-increment: li;
+}
+
+div#sortWrap ol li.numberStyle:before{
+    content: counter(li);
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #daeaef;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+div#sortWrap ol li.itemCorrectStyle{
+    background: #daeaef url(../common_images/tick_small.png) no-repeat 99% 50%;
+}
+
+div#sortWrap ol li.allCorrectStyle{
+    background-color: #daeaef;
+    background-image: none;
+}
+
+/* Two column sort to match (Image) */
+div#matchWrap ul li, 
+div#sortWrap.sortWrapImg ul li{
+    visibility:hidden;
+    border-radius: .5em;
+    float:left;
+    margin: 0px 2.5px;  
+}
+
+div#sortWrap.sortWrapImg ul {
+    display:block; 
+    overflow:hidden;
+    position:static; 
+    _width:100%; /* ie6 format on sort fix */
+}
+
+div#matchWrap ul li{ 
+    padding: 4px 4px 5px 4px;
+    color: #000;
+    background:#daeaef;
+    text-align: center;
+    display: block;
+    line-height: 125%;
+}
+
+div#sortWrap.sortWrapImg ul li{ 
+    padding: 16px 4px 16px 4px;
+    background: #ddd url(../common_images/sortable_horizontal.png) no-repeat 50% 2%;
+    position:relative;
+}
+
+div#sortWrap.sortWrapImg ul li:hover{
+    background: #d0d0d0 url(../common_images/sortable_horizontal_hover.png) no-repeat 50% 2%;
+}
+
+div#sortWrap.sortWrapImg ul li img { 
+    float: none;
+}
+
+div#sortWrap.sortWrapImg ul li p { 
+    text-align: center;
+    word-wrap: break-word;
+    font-weight: bold;
+    position: relative;
+    top: 0.8em;
+    padding: 0em;
+    line-height: 115%;
+}
+
+div#sortWrap.sortWrapImg ul li.itemCorrectStyle{ 
+    background-image:none;
+    background-color: #daeaef;
+    color:#000;
+}
+
+div#sortWrap.sortWrapImg ul li.allCorrectStyle{
+    background-image:none;
+    background-color: #daeaef;
+    color:#000;
+}
+
+/* Appended div to display tick above image */
+div#sortWrap.sortWrapImg ul li div.sortCorrectTick{
+    background: url(../common_images/tick_small.png) no-repeat;
+    position:absolute;
+    height:21px;
+    width:21px;
+    right:7px;
+    bottom:20px;
+}
+
+/* Two column sort to match (Text) */
+div#sortWrap.sortWrapText ol li, 
+div#matchWrap.sortWrapText ul li { 
+    line-height: 120%;
+    margin: 0px 0px 3px 0px;
+    padding-left: 20px;
+} 
+
+div#sortWrap.sortWrapText{ 
+  position: relative;
+  float:left;
+  display: inline-block;
+}
+
+div#sortWrap.sortWrapText ul{ 
+    overflow: visible;
+} 
+
+div#matchWrap.sortWrapText{
+  position: relative;
+  float:left;   
+  display: inline-block;
+} 
+
+div#matchWrap.sortWrapText ul li 
+{
+    color: #000;
+    padding: 4px 10px 5px 10px;
+    text-align: left;
+    float:none;
+}
+
+/* Sort Container */
+#sortFrameContainer{
+    height:385px;
+    width:675px;
+}
+
+/* Sort submit button */
+.btn#sortSubmit {
+    position:relative;
+    float:right;
+    margin-right:25px;
+    visibility:hidden;
+    z-index: 1;
+}
+
+/* margin for button */
+#matchWrap.sortWrapImg ul#match-list{
+    margin-bottom: 5px;
+    padding: 1px 5px 1px 0px;
+    display: inline-block;
+}
+
+.attemptText{
+    display:none;
+}
+
+/* Note small */
+.note {
+	display: block;
+}
+
+.note .title {
+	padding: 5px 0px 0px 16px;
+	font-weight: bold;
+	font-size: 110%;
+	color: white;
+}
+
+.noteShort {	
+	width: 260px;
+	height: 107px;
+	background: url(../common_images/note_small.png) no-repeat 0 0;
+}
+
+.noteWide {
+	width: 368px;
+	height: 93px;
+	background: url(../common_images/note_wide.png) no-repeat 0 0;
+}
+
+.noteSmaller {	
+	width: 217px;
+	height: 87px;
+	background: url(../common_images/note_smaller.png) no-repeat 0 0;
+}
+
+.noteLong {
+	width: 261px;
+	height: 145px;
+	background: url(../common_images/note_long.png) no-repeat 0 0;
+}
+
+.noteInteract {
+
+	width: 260px;
+	height: 86px;
+	background: url(../common_images/note_interact.png) no-repeat 0 0;
+}
+
+.noteShortInteract {
+	width: 216px;
+	height: 86px;
+	background: url(../common_images/noteshort_interact.jpg) no-repeat 0 0;
+}
+
+.note p { padding: 17px 24px 6px 16px; }
+.noteInteract p { padding: 12px 43px 6px 16px !important; }
+.noteShortInteract p { padding: 12px 43px 6px 16px !important; }
+
+.roundedBox { background-color: #ececec; padding: 8px 16px 8px 16px; }
+.roundedBox span { display: block; font-weight: bold; padding: 5px 0 5px 0; }
+
+/* QUESTIONS v2 */
+div.questionBox ul { list-style: none; }
+div.questionBox ul li { margin: 7px 0px; background: none; }
+div.questionBox ul li input { width: 15px; display: block; float:left;}
+div.questionBox ul li label { padding-left: 28px; display: block; font-weight: bold; }
+*:first-child+html div.questionBox ul li label { padding-left: 28px; display: inline-block; font-weight: bold; }
+* html div.questionBox ul li label { padding-left: 28px; display: inline-block; font-weight: bold; }
+*:first-child+html img.question { margin-top: 5px; }
+* html img.question { margin-top: 5px; }
+div.questionBox ul li label:hover { background-color:#e8f0fa; }
+div.questionBox ul li div { margin-left: 28px; clear: both; font-size: .9em; }
+img.question { margin-top: 20px; position:relative}
+
+.activityFeedback #incorrect,.activityFeedback #correct,.activityFeedback .modalWindow #incorrect,.activityFeedback .modalWindow #correct
+{
+	background:no-repeat 10px;
+	display:none;
+	color: #444;
+	height:auto;
+	margin-top:.5em;
+	min-height:44px;
+	padding:.2em .5em .2em 68px;
+	text-align:left;
+	line-height: 40px;
+	font-size: 100%;
+	font-weight: normal;
+
+}
+
+.activityFeedback .modalWindow #incorrect,.activityFeedback .modalWindow #correct
+{
+	border:0;
+	display:block;
+	margin:0;
+}
+
+.activityFeedback #correct span
+{
+	color:#57893E;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.activityFeedback #incorrect span
+{
+	color:#E51E23;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.activityFeedback #incorrect p,.activityFeedback #correct p
+{
+	color:#000;
+	display:inline;
+	font-size:80%;
+	font-weight:400;
+}
+
+.activityFeedback #incorrect
+{
+	background-image:url(../common_images/incorrect.gif)!important;
+}
+
+.activityFeedback #correct
+{
+	background-image:url(../common_images/correct2.gif)!important;
+}
+
+/* Click object/person to reveal Activity */ 
+dt #side_image{
+	border:none; MARGIN-TOP: 0px; padding-LEFT: 60px; 
+	FLOAT: left;   MARGIN-left: 0px;  TEXT-ALIGN: center
+}
+dt #center_image {
+	margin-LEFT: 10px; FLOAT: none; WIDTH: 200px; COLOR: black; TEXT-DECORATION: none
+}
+#click_object_no_margin {
+	MARGIN: 0px; 
+}
+.object_click {
+	PADDING:0; 
+	BACKGROUND-POSITION: 100% bottom; 
+	PADDING-LEFT: 0px; 
+	LEFT: 185px;  
+	MARGIN-LEFT: 10px; 
+	WIDTH: 450px;   
+	BACKGROUND-REPEAT: repeat-x; 
+	POSITION: absolute; 
+	TOP: 130px; 
+	HEIGHT: 250px; 
+}
+
+
+ /* multi-coloured table */ 
+.strippedTable{width:70%; border:none}
+.strippedTable th {background-color:#5e93b1; color:#fff}
+.strippedTable tr.odd {background-color:#b7dee8}
+.strippedTable tr.even {background-color:#daeaef}
+.strippedTable td{padding:3px}
+
+
+ /* Notebook frame */ 
+
+.notebookBody{
+	background:transparent url(../common_images/notebook_bg.gif) no-repeat top left;
+	height:390px;
+	padding:0;
+	margin:0;
+}
+
+.notebookWide{
+	padding:0 20px 0 20px;
+	margin:0;
+}
+
+h1.blueFade,h1.blueFadeShort {
+	margin:0;
+	font-family:Franklin Gothic Medium, Arial,Helvetica,sans-serif;
+	color:#6192b2;
+	font-size: 150%;
+	padding:13px 0 20px 20px;
+	font-weight:300;
+}
+
+h1.blueFade {
+	background:transparent url(../common_images/header_bluefade_01.jpg) no-repeat top left;
+}
+h1.blueFadeShort {
+	background:transparent url(../common_images/header_bluefade_short.jpg) no-repeat top left;
+}
+
+.notebook{
+padding:0 20px 0;
+width:49%;
+}
+
+.notebookRight{
+float:right;
+width:49%;
+}
+
+.notebookRightwrapper{
+padding : 0 20px 0;
+}
+
+h1.notebookHeader{
+	margin:13px 10px 20px 0px;
+	font-family:Franklin Gothic Medium, Arial,Helvetica,sans-serif;
+	color:#6192b2;
+	font-size: 150%;
+	padding-bottom:0;
+	font-weight:300;
+}
+ 
+ .notebookBullet li
+{
+	background:url(../common_images/notebook_bullet.gif) 0 .2em no-repeat;
+	list-style:none;
+	/*padding-left:20px;*/
+	padding: 0px 0px 8px 20px;
+}
+ 
+.notebookContainer
+{
+	padding:0px 20px 0 20px;
+	float:left;
+	width:350px;
+	display: inline;
+}
+
+
+
+.notebookBody  #questionWrapper{
+	background:url(../common_images/notebook_question.jpg) no-repeat right top;
+	height:390px;
+	float:left;
+	width:263px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+.notebookBody .questionsImages{
+	padding:20px 10px 0px 0px;
+	margin:0;
+}
+
+.notebookBody .questionsImages li{
+	background:none;
+	display:inline-block;
+	float:none;
+	list-style:none;
+	list-style-image:none;
+	padding:0;
+}
+
+.notebookFeedback #incorrect,.notebookFeedback #correct
+{
+	background:no-repeat 10px;
+	display:none;
+	color: #444;
+	height:auto;
+	margin-top:.5em;
+	min-height:44px;
+	padding:.2em .5em .2em 68px;
+	text-align:left;
+	line-height: 15px;
+	font-size: 100%;
+	font-weight: normal;
+	height:44px;
+}
+
+.notebookFeedback #correct span
+{
+	color:#57893E;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.notebookFeedback #incorrect span
+{
+	color:#E51E23;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.notebookFeedback #incorrect p,.notebookFeedback #correct p
+{
+	color:#000;
+	display:inline;
+	font-size:80%;
+	font-weight:400;
+}
+
+.notebookFeedback #incorrect
+{
+	background-image:url(../common_images/incorrect.gif)!important;
+}
+
+.notebookFeedback #correct
+{
+	background-image:url(../common_images/correct2.gif)!important;
+}
+
+ /* Question Layout for Notebook frame */ 
+ 
+ .qNoteLeft{
+	float:left;
+	margin:10px 0 0 50px;
+	display:inline;
+}
+
+.qNoteRight{
+	float:right;
+	margin:10px 50px 0 0;
+	display:inline;
+}
+
+.qNote li{
+	float:none;
+	background:none;
+	display:block;
+	text-align:center;
+	list-style:none;
+	list-style-image:none;
+	margin:0;
+	padding:0;
+}
+
+.qNote li span
+{
+	font-weight:bold;
+}
+
+.qNote label
+{
+	display:block;
+	font-weight: bold;
+	float:left;
+}
+
+.qNote li input
+{
+	width:10%;
+}
+
+ul #bullet1{
+
+	background:url(../common_images/bullet_no1.jpg) no-repeat;
+	list-style:none;
+	padding: 0px 0px 8px 25px;
+}
+
+ul #bullet2{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no2.jpg) no-repeat;
+}
+
+ul #bullet3{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no3.jpg) no-repeat;
+}
+
+ul #bullet4{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no4.jpg) no-repeat;
+}
+
+ul #bullet5{
+
+background:url(../common_images/bullet_no5.jpg) no-repeat;
+list-style:none;
+padding: 0px 0px 8px 25px;
+}
+
+ul #bullet6{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no6.jpg) no-repeat;
+}
+
+ul #bullet7{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no7.jpg) no-repeat;
+}
+
+ul #bullet8{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no8.jpg) no-repeat;
+}
+
+ul #bullet9{
+list-style:none;
+padding: 0px 0px 8px 25px;
+background: url(../common_images/bullet_no9.jpg) no-repeat;
+}
+
+#hotspotsMinorContainer{
+width:45%;
+float:left;
+padding:20px 20px 0;
+
+}
+
+/* Minor Hotspot Activity*/
+
+
+.hotspotsMinor  {
+    margin:0;
+	position:inherit;
+	width:100%;
+}
+
+/* Transparent image is a hack for IE 6/7 browsers to make the spot area clickable */
+.hotspotsMinor a {
+    position: absolute;
+    display: block;
+    z-index: 400;
+    background: url(../common_images/transparent.gif) repeat top left;
+}
+
+.hotspotsMinor dd {
+    display:none;
+    left:0;
+	position:relative;
+	top:10px;
+	margin:0;
+	z-index: 480;
+}
+
+#hotspotImageMinor{float:right}
+
+.hotspotsMinor dt span
+{
+	display:none;
+}
+
+.hotspotMinorHelpButton
+{
+	position:absolute;
+	right:20px;
+	top:10px;
+	z-index:440;
+}
+
+.revealButton{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.revealButton li {
+	display:inline;
+	list-style-type: none;
+	list-style-image: none;
+	background:none;
+	padding:0;
+	margin:0;
+}
+ 
+.revealButton li a {
+	background:transparent url(../common_images/reveal.png) no-repeat top left;
+	display:block;
+	float:left;
+	height:24px;
+	padding:8px 0 0 20px;
+	width:61px;	
+	color:#606060;
+	text-decoration: none;
+}
+
+.revealButton li a:hover {
+    background-position:0px -34px; color:#888;
+}
+
+.hotspotMinorHighlight{
+border:2px solid #F3742D;
+border-style:dashed;
+}
+
+#hotspotMinorUiBlocker
+{
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40)!important;
+	background-color:#000;
+	display:none;
+	filter:alpha(opacity=40)!important;
+	left:13px;
+	opacity:0.4;
+	position:absolute;
+	top:2px;
+	z-index:450;
+}
+
+#hotspotMinorWindow,#hotspotMinorHelpWindow
+{
+	background:#fff;
+	border:none;
+	display:none;
+	height:125px;
+	left:167px;
+	padding:5px;
+	position:absolute;
+	top:115px;
+	width:300px;
+	z-index:500;
+	padding:20px 20px 0;
+	border:1px solid #CCC;
+}
+
+.hotspotMinorCloseWindow, .closeWindow
+{
+	float:right;
+	position:relative;
+}
+
+.hotspotMinorCloseWindow,.hotspotMinorCloseWindow span, .closeWindow,.closeWindow span
+{
+	height:18px;
+	width:18px;
+	text-indent:-9999px;
+	position:static;
+	padding:0;
+	margin:0;
+}
+
+.hotspotMinorCloseWindow span, .closeWindow span
+{
+	background-image:url(../common_images/box_exit.png);
+	right:5px;
+	position:absolute;
+	top:5px;
+}
+
+.hotspotMinorCloseWindow span:hover, .closeWindow span:hover 
+{
+    background-image:url(../common_images/box_exit_hover.png);
+}
+
+.hotspotMinorCheck
+{
+	background-image:url(../common_images/tickspot.gif);
+	height:33px;
+	position:absolute;
+	width:34px;
+}
+
+.hotspotMinorCheckFalse
+{
+	background-image:url(../common_images/incorrect.gif);
+	height:50px;
+	position:absolute;
+	width:47px;
+}
+
+/* Horizontal rule under Header*/
+
+.rule{ 
+height: 6px; 
+background: url(../common_images/hor_rule.gif) no-repeat scroll center;
+width:325px;
+margin:0px 0px 10px -23px;
+padding:0;
+}
+
+h1.ruleHeader{margin:0 0 3px 0}
+
+/*Icon Click Activity*/
+
+.icons dd
+{
+	display:none;
+	position:absolute;
+	margin:0;
+}
+
+.iconsLight
+{
+	margin:0;
+	padding:0;
+	position:static;
+	display:block;
+	float:right;
+}
+
+.iconsLight dt
+{
+	float:left;
+    z-index:0; /*ie8 fade-in icons fix*/ 
+}
+
+.iconsLight dd
+{
+	position:absolute;
+	z-index:9999;
+}
+
+.iconsLight dt a
+{
+	background:transparent;
+	display:block;
+}
+
+.iconsLight dt span
+{
+	display:block;
+}
+
+.fader {
+  position: relative;
+}
+
+/*icon image formatting ie6/7, overwrites float:right on img*/ 
+.fader img{
+    float: left;
+    _float:right;
+    _position:absolute;
+}
+
+.fader .ImgHover {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+.fader .ImgDown {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+.icontextWrapper {
+float:left;
+margin:20px 0 0 20px;
+padding:0;
+display:inline;
+}
+
+/* Google Translate toolbar 
+- hide it
+- move freame up 40px
+*/
+.goog-te-banner-frame{display:none !important;}
+#screenBody {
+	top:0px !important;
+
+	/* google translate body styles insertion fix eventum #3249 */
+	min-height:1px !important;
+    position:static !important;
+}
+
+/*Expandable noteboxes*/
+
+.noteExpand{
+  margin: 0 0 10px 10px;
+  color:#000;
+  position:relative;
+}
+
+.noteExpand dt{
+	margin: 0;
+	padding: 2px 15px 0px 10px;
+    line-height:17px;
+	border-bottom :2px solid #fff;
+	color:#fff;
+	font-weight:bold;	
+}
+
+.noteExpand dd{
+  margin: 0;
+  padding: 10px;
+  color:#000;
+}
+
+.noteExpand .info_img{
+	position:absolute;
+	top:3px;
+	background: transparent url(../common_images/notebox_info.jpg)  
+	no-repeat top left;
+	width:33px;
+	height:33px;
+}
+
+.noteExpand .interact_img{
+	position:absolute;
+	top:3px;
+	background: transparent url(../common_images/notebox_interact.jpg)  
+	no-repeat top left;
+	width:33px;
+	height:33px;
+}
+
+/*********************** Short expandable notebox ***********************/
+
+.expandShort{
+	width: 190px;
+	background: #ececec url(../common_images/notebox_small_bottom.jpg) no-repeat bottom left;
+}
+
+.expandShort dt{background: #969696 url(../common_images/notebox_small_top.jpg) no-repeat top left;}
+
+
+.expandShort .info_img{left:152px;}
+.expandShort .interact_img{left:152px;}
+
+/*************** Middle size expandable notebox ***************/
+
+.expandMiddle{
+	width: 240px;
+	background: #ececec url(../common_images/notebox_medium_bottom.jpg) no-repeat bottom left;
+}
+
+.expandMiddle dt{
+  background: #969696 url(../common_images/notebox_medium_top.jpg) no-repeat top left;
+}
+
+.expandMiddle dd {
+  margin: 0;
+  padding: 10px;
+  color:#000;
+}
+
+.expandMiddle .info_img {left:198px;}
+.expandMiddle .interact_img{left:198px;}
+
+/*********************** Longer expandable notebox ***********************/
+
+.expandLong{
+	width: 330px;
+	background: #ececec url(../common_images/notebox_wide_bottom.jpg) no-repeat bottom left;
+}
+
+.expandLong dt{background: #969696 url(../common_images/notebox_wide_top.jpg) no-repeat top left;}
+
+.expandLong .info_img{left:290px;}
+.expandLong .interact_img{left:290px;}
+
+/* 
+ rounded transparent expandable corner box for overlaying on image: 
+*/
+
+.whiteBox, .whiteBoxRight{
+	position:relative;
+	margin:0px auto;
+	min-width:8em;
+	color:#666;
+	z-index:1;
+	margin:10px 3px 0 23px; /* default, width of left corner */
+	font-family: Arial, Helvetica, sans-serif;	
+	line-height: 1.6em;
+}
+
+.whiteBoxRight{float:right}
+
+.whiteBox .boxContent,
+.whiteBox .t,
+.whiteBox .b,
+.whiteBox .b div {
+	 background:transparent url(../common_images/white_textbox.png) no-repeat top right;
+	  _background-image:url(../common_images/white_textbox.gif);
+}
+
+.whiteBox .boxContent {
+	 position:relative;
+	 zoom:1;
+	 _overflow-y:hidden;
+	 padding:12px 16px 0px 2px;
+}
+
+.whiteBox .t {
+	 /* top+left vertical slice */
+	 position:absolute;
+	 left:0px;
+	 top:0px;
+	 width:12px; /* top slice width */
+	 margin-left:-12px;
+	 height:100%;
+	 _height:1600px; /* arbitrary long height, IE 6 */
+	 background-position:top left;
+}
+
+.whiteBox .b {
+	 /* bottom */
+	 position:relative;
+	 width:100%;
+}
+
+.whiteBox .b,
+.whiteBox .b div {
+	 height:45px; /* height of bottom cap/shade */
+	 _height:20px; /* IE6 for rounded gif */
+	 font-size:1px;
+}
+
+.whiteBox .b {
+	background-position:bottom right;
+}
+
+.whiteBox .b div {
+	 position:relative;
+	 width:12px; /* bottom corner width */
+	 margin-left:-12px;
+	 background-position:bottom left;
+}
+
+.whiteBox .hd,
+.whiteBox .bd,
+.whiteBox .ft {
+	position:relative;
+}
+
+.whiteBox .wrapper {
+	 /* extra content protector - preventing vertical overflow (past background) */
+	 position:static;
+	 max-height:1000px;
+	 overflow:auto; /* note that overflow:auto causes a rather annoying redraw "lag" in Firefox 2, and may degrade performance. Might be worth trying without if you aren't worried about height/overflow issues. */
+}
+
+.whiteBox h1,
+.whiteBox p,
+.whiteBox ul,
+.whiteBox ol {
+	 margin:0px; /* margins will blow out backgrounds, leaving whitespace. */
+	 padding:0.5em 5px 0.5em 0px;
+	 position:relative;
+}
+
+.whiteBox .noteExpand{
+	 margin:0px; /* margins will blow out backgrounds, leaving whitespace. */
+	 margin-top:5px;
+	 line-height:1.3em;
+}
+
+.whiteBox .Indent1{margin-left:10px}
+
+.whiteBox .Indent2{margin-left:20px}
+
+.whiteBox h1 {
+	/* header */
+	font-size: 1.4em; 
+	font-weight: lighter;
+	background:url('../common_images/header_invert.jpg') no-repeat right top;
+	border:none;
+	padding:6px 0;
+	overflow:hidden;
+	min-width:200px;
+	margin-bottom:5px;
+}
+
+.whiteBoxHeader50{width:319px}
+.whiteBoxHeader45{width:285px}
+
+.bulletsAlign{ 
+	margin:15px 0; 
+}
+
+.rounded { /*rounded corners excluding IE6, 7 and 8*/
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ background-color: #E9EAEC; 
+ padding: 8px 16px 8px 16px;
+ }
+ 
+.whiteboxFeedback{line-height: 1.6em;} /* for styling elements outside whiteboxBox div */
+
+.whiteboxFeedback #incorrect,.whiteboxFeedback #correct,.whiteboxFeedback #attemptsOver  /* question feedback in grey roundedbox*/
+{
+	background:no-repeat 10px;
+	display:none;
+	color: #444;
+	height:auto;
+	margin-top:.3em;
+	min-height:44px;
+	padding:12px 16px 12px 68px;
+	text-align:left;
+    font-size: 100%;
+	font-weight: normal;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #E9EAEC; 
+    position:absolute;
+    z-index:4;
+}
+
+.whiteboxFeedback #correct span
+{
+	color:#57893E;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.whiteboxFeedback #incorrect span, .whiteboxFeedback #attemptsOver span
+{
+	color:#E51E23;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.whiteboxFeedback #incorrect
+{
+	background-image:url(../common_images/incorrect.gif)!important;
+}
+
+.whiteboxFeedback #correct
+{
+	background-image:url(../common_images/correct2.gif)!important;
+}
+
+.whiteboxFeedback #incorrect.warning, .whiteboxFeedback #correct.warning
+{
+	background-image:url(../common_images/warning.png)!important;
+}
+
+.whiteboxFeedback #attemptsOver /* pop-up box if all attempts used */
+{
+    padding:12px 16px 12px 16px;
+}
+
+#whiteBoxWrap .optionsList label {
+    padding: 1px;
+    background-color: #f1f6f9;
+    border-radius:5px;
+    font-weight:normal !important;
+}
+
+#whiteBoxWrap .optionsList label:hover { background-color: #e9f1f3;}
+
+/* Cannot select the background / #15598 */
+img#bg { z-index:-1; top:0px; }
+
+/* Image preloader */
+#loading{
+    background-image:url(../common_images/spinner.gif);
+    height:32px;
+    width:32px;
+    text-indent:-9999px;
+    position: absolute; 
+    top: 50%;
+    z-index:9999;
+    display:none;
+}
+
+.left25{left:25%;}
+.left50{left:50%;}
+.left75{left:75%;}
+
+.iconOpacity img{
+    opacity:0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+.introFx{
+    display:none;
+    position:absolute;
+}
+
+/* general button styling */
+.btn {
+  display: inline-block;
+  padding: 3px 14px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  background-imcolor: #ddd;
+  border: 1px solid transparent;
+  border-radius: .5em;
+  color: #555; 
+}
+	
+.btn:hover {
+    background-color: #d7d7d7; 
+}
+
+/* Vimeo countdown timer */
+p#timer {
+    color:#ff9933;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:350px;
+    left:5px;
+    background-color:#000;
+    padding:5px;
+    opacity:0.8;
+    display:none;
+    border-radius: 12px;
+    margin: 0;
+}
+
+p#timer .clickForward,
+p#timer .paused {
+    display:none;
+}
+

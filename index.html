@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="SCOFunctions/choose_lang.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" />
+<script type="text/javascript" src="SCOFunctions/api.min.js?v=201605051448_887aa927d71dd7a8a895ad69a063845d"></script>
+<script type="text/javascript" src="SCOFunctions/jquery.min.js?v=201605051448_887aa927d71dd7a8a895ad69a063845d"></script>
+<style>
+.goog-te-banner-frame{display:none !important;}
+body{ top:0px !important; margin: 0px !important; }
+
+div.contentWrapper {
+	top: 60px;
+	left: 100px;
+	width: 966px;
+	height: 460px;
+	margin: 0px auto;
+	background-image: url("common_images/splash_bg.jpg");
+	background-repeat: no-repeat;
+	padding-top: 60px;
+}
+
+/* Copy link styles from risk assessment */
+a,h1 {
+    text-decoration: none;
+	color: #4D4D4D;
+	font-weight: bold;
+	font-family: arial, verdana, helvetica !important;
+	font-size: 10pt;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div#langSelector h1 {
+    margin: 0 0 0 100px;
+}
+</style>
+<!--[if IE 6]>
+<style>
+/* IE6 alignement fix */
+.floatCenterWrapper {
+   position: relative;
+   float: none;
+   left: 0;
+}
+</style>
+<![endif]-->
+</head>
+<body id="indexBody" onload="initLang()">
+<script type="text/javascript">
+var showSplash = 0;
+var cleanMinHeightInterval = false;
+var gtApiListenerHandler = false;
+
+// when document is loaded it will display language selector div
+function initLang()
+{
+    // if there is lang preference set, then don't do anything
+    if( langFolder )
+        return;
+    
+    document.getElementById( 'waitMsg' ).style.display = 'none';
+    document.getElementById( 'langSelector' ).style.display = 'block';
+}
+
+// perform certain actions after googletranslate.js is loaded
+function gtApiListener()
+{
+    if( typeof( cleanMinHeight ) == 'undefined' )
+		return;
+
+    clearInterval( gtApiListenerHandler );
+    cleanMinHeightInterval = setInterval( cleanMinHeight, 500 );
+}
+
+// load Google Translate(GT) when click on GT icon
+function initGT()
+{
+    if( typeof(GT_LOADED) != 'undefined' )
+        return;
+
+    GT_LOADED = true;
+    loadGoogleTranslate( window, '' );
+    gtApiListenerHandler = setInterval( gtApiListener, 500 );
+    
+}
+
+// list of available languages
+var availableLanguages = new Array( "eng" );
+
+// check if course supports current language
+function isLangAvailable()
+{
+	var alLimit = availableLanguages.length;
+	for( i=0; i<alLimit; i++ )
+		if( olasLanguage == availableLanguages[i] )
+			return true;
+			
+	return false;
+}
+
+// connect to LMS
+doLMSInitialize();
+
+// set lang folder
+var langFolder = false;
+
+// if there is only one language available - use it
+if( ! showSplash && availableLanguages.length == 1 )
+	langFolder = 'lang/' + availableLanguages[0] + '/';	
+
+// Redirect to relevant language version if known
+if( langFolder  )
+   	window.location.replace( langFolder + 'player.html' );
+</script>
+<div id="waitMsg">Please wait...</div>
+<div class="contentWrapper">
+	<script type="text/javascript">
+//google translate API(GT)
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({
+	  pageLanguage: 'en',
+	  includedLanguages: '',
+	  multilanguagePage: true,
+	  autoDisplay: false,
+	  layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+	}, 'google_translate_element' );
+}
+
+function startWithGt( url )
+{
+    // check if language has been selected
+	if( $( 'a.goog-te-menu-value span:contains(Select Language)' ).length > 0 )
+	{
+		alert( 'Please choose your preferred language first.' );
+		return;
+	}
+
+    // redirect to given url(will use google translate)
+    window.location.href = url;
+}
+
+function showHome() {
+    document.getElementById( 'gtColumn' ).style.display = 'none';
+    document.getElementById( 'builtinColumn' ).style.display = 'block';
+}
+
+var GtFrameWaitingLimit = 60;
+var GtLangsWaitingLimit = 60;
+
+/**
+ * Select google translate language
+ * 
+ *  @param string lang english name of language present in GT menu/dropdown 
+ */
+function changeGoogleTranslate( lang, type ) 
+{ 
+	// Find GT bar
+	var $frame = $('.goog-te-menu-frame:first');
+	
+	// find language in GT dropdown menu
+	var $gtLangItem = $frame.contents().find('.goog-te-menu2-item span.text:contains('+lang+')').first();
+
+	// click on given language if exist
+	if( $gtLangItem[0] )
+	{
+		var element = $gtLangItem[0];
+		// Safari (iOS < 6)
+		if (document.createEvent && (type === 'touchend')) {
+			var evt = document.createEvent('MouseEvents');
+			evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+			element.dispatchEvent(evt);
+		}
+		// non-Safari
+	    else {
+			element.click();
+	    }
+	}
+	
+	// launch the content
+	setTimeout(function () {
+		startWithGt('lang/eng/player.html?gt=1');
+	}, 500);
+}
+
+/**
+ * Shorthand function for generateGTLangs(), which keeps trying to get data from GT
+ * 
+ * @see generateGTLangs()
+ * @param int limit max number of tries for receiving data
+ * @param jQuery $div
+ * @param string msg error msg to be populated to $div
+ */
+function generateGTLangsFork( limit, $div, msg )
+{
+	// If exceeded number or times - give up
+	--limit > 0
+		? setTimeout( generateGTLangs, 500)	
+		: $div.text( msg );
+}
+
+/**
+ * Populates screen with GT languages
+ */
+function generateGTLangs()
+{
+	var ldiv = $('#gtPanel');
+	
+	// Find GT bar
+	var $frame = $('.goog-te-menu-frame:first');
+	
+	// If not found then try again few more times
+	if (! $frame.size() ) 
+	{
+		generateGTLangsFork( GtFrameWaitingLimit, ldiv, 'Cannot retrieve the list of languages from Google Translate: GT frame is not loaded.' );
+		return;
+	}
+
+	// get GT langs
+	var $gtLangs = $frame.contents().find('.goog-te-menu2-item span.text');
+	if( $gtLangs.length < 40 )
+	{
+		generateGTLangsFork( GtLangsWaitingLimit, ldiv, 'Cannot retrieve the list of languages from Google Translate: cannot find languages.' );
+		return;
+	}
+
+	// Check the currently selected language, as it may not be included in GT dropdown menu($gtLangs) 
+	var currLang = null;
+	var $currLang = $frame.contents().find('.goog-te-menu2-item-selected span.text');
+	if( $currLang.length > 0 )
+	{
+		var l = $currLang.text();
+		if( l !== 'Select Language' )
+			currLang = l;
+	}
+	
+	// populate our div with GT languages
+	$gtLangs.each( function( index, el ) {
+		// lang to be added
+		var l = $(el).text();
+		var items = new Array();
+
+		// check if this is the right place to insert our current language
+		// according to alphabetical order
+		if( currLang && currLang < l )
+		{
+			items[0] = currLang;
+			// from now we don't need to insert it again
+			currLang = null; 
+		}
+
+		// alwas insert the languages from the ordinary list
+		items.push( l );
+		for( var i=0; i<items.length; i++ ) {
+			// jQuery-like element creation
+			var $langLink = $('<a/>'),
+				langLabel = items[i],
+				timeOut = null;
+
+			$langLink.attr('href', 'javascript:void(0)').text(items[i]).on('click touchend', function (e) {
+				e.preventDefault();
+				// it fires in some cases both events
+				if ( timeOut !== null ) {
+					return;
+				}
+				timeOut = setTimeout(function () {
+					changeGoogleTranslate(langLabel, e.type || 'click');
+					timeOut = null;
+				}, 100);
+			});
+
+			ldiv.append( $('<span/>').addClass('langItem').append($langLink) );
+		}
+	});
+	
+	// remove loading indicator 
+	$('#gtPanel div.loader').remove();
+}
+
+</script>
+<div id="langSelector">
+			<h1 class="notranslate">Please, choose your language:</h1>
+		<div id="gtColumn" class="langColumn">
+		<div id="google_translate_element" style=""></div>
+		<p>Welcome to the Google Translate language option. Click the <strong>Down</strong> arrow above to select a language. If you are satisfied with the language selection, click the <strong>Forward</strong> arrow to launch your course.</p>
+		<p class="gtButtons">
+			<a class="back" href="javascript:void(0);" title="Back" onclick="showHome();return false;"></a>
+			<a class="start" href="javascript:void(0);" title="Forward" onclick="startWithGt('lang/eng/player.html?gt=1');return false;"></a>
+		</p>
+	</div>
+	<div id="builtinColumn" class="langColumn notranslate">
+		<div class="floatCenterWrapper">
+			<div class="floatCenter langList">
+    		    			<a href="lang/eng/player.html" class="mainLangItem">English</a>
+    		    		</div>
+    	</div>	 
+		<div class="gtSpacer"></div>
+			</div>
+</div></div>
+</body>
+</html>

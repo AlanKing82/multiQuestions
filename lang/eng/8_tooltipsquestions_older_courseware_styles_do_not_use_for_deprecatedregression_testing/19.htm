@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Spritely animation</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<style type="text/css"><!--
+#achieve {
+	Z-INDEX: 5; POSITION: absolute; WIDTH: 250px; DISPLAY: block; BACKGROUND: url(../../../media/achieve_sequence_new.jpg) no-repeat 0px 0px; HEIGHT: 334px; TOP: 51px; LEFT: 419px
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div id="achieve"></div>
+<div class="width50" id="whiteBoxWrap">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1>Achieve the neutral sitting position</h1>
+<dl class="noteExpand expandShort"><dd class="interact_img"></dd><dt>Interact</dt><dd>Click on the image for<br />more information.</dd></dl></div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<dl class="icons iconsLight whiteboxFeedback"><dt id="01" style="top: 51px; left: 419px;"><a href="javascript:void(0);" id="icon2"> <span class="fader"> <img src="../../../media/ach_01a_up.jpg" /> <img src="../../../media/ach_01a_hover.jpg" title="Achieving the neutral sitting position." class="ImgHover" alt="Achieving the neutral sitting position." height="334" width="250" /> <img src="../../../media/ach_01a_down.jpg" class="ImgDown" /> </span> </a></dt><dd class="rounded" style="width: 305px; top: 150px; left: 17px;">
+<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
+<p>To achieve the neutral sitting position, firstly, sit as far back on the seat to ensure your lower back makes contact with the supporting backrest.</p>
+<p>The chair's backrest should always support your lower back to maintain your spine's natural inward curve.</p>
+<p>You should adjust the backrest for height and move forwards or backwards to obtain the ideal position.</p>
+</dd></dl><img src="../../../media/achieve_bg_03.jpg" title="A user achieving the neutral position at an office desk." id="bg" alt="A user achieving the neutral position at an office desk." height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;  
+
+if (parent.$) {
+var frame = parent.$("#myFrame").contents();        
+parent.$(".hotspotsMinor a", frame).hotspotMinor();        
+parent.$('.icons a', frame).icons();
+parent.disable(true);		
+parent.$(".iconsLight dt", frame).css(								{												'width' : '250px',							
+'height' : '334px',                                                                'display':'block'								                 });		
+
+parent.$("#achieve",frame).hide();
+parent.$(".iconsLight dd", frame).css({'z-index':'3'});
+parent.$("#bg, #01, #whiteBoxWrap", frame).css({
+'display':'none',                                                          
+'position':'absolute'
+});
+
+
+parent.$( document ).ready(function() {
+parent.$("#bg", frame).delay(1000).fadeIn("slow", function(){
+parent.$("#whiteBoxWrap", frame).slideDown("slow", function(){
+parent.$("#01", frame).delay(1500).fadeIn("slow", function(){
+parent.toggleButton( 'prev', true);
+});
+});
+});
+});
+
+
+
+
+
+parent.$("#icon2", frame).click(function(){
+  parent.$("#achieve",frame).show(0, function(){
+  
+    parent.$(this).sprite({
+      fps: 24,
+      no_of_frames: 99,
+      play_frames: 99});
+
+});
+});
+
+
+
+}
+// ]]></script>
+<!--OLAS CDT SCREEN UPGRADE: z-index fix for background images in tinymce UI 20150105 16:34:07--></body>
+</html>

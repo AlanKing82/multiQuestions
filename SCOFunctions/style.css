@@ -1,0 +1,115 @@
+/* $Rev: 6738 $ $Date: 2015-05-11 14:05:55 +0100 (Mon, 11 May 2015) $ $Author: jan $ */
+#lessonTitle
+{
+    position: absolute;
+    top: 41px;
+    left: 63px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#contentWrapper
+{
+    top: 65px;
+    left: 30px;
+    width: 696px;
+	height: 407px;
+	overflow: hidden;
+	position: absolute;
+}
+
+#myFrame
+{
+	margin: 0;
+	height: 390px;
+	width: 675px;
+	margin: 12px 0px 9px 12px;
+	border: 0;
+}
+
+#progress
+{
+    position: absolute;
+    top: 486px;
+    right: 171px;
+    width: 152px;
+	height: 19px;
+	
+}
+
+#progress_bar
+{
+	height: 19px;
+	background: url(../common_images/iplayer_progess.jpg) repeat center left;
+	width:50%
+}
+
+.screen_counter
+{
+  font-family: Verdana; 
+  padding: 0px;
+  padding-right:5px;
+  font-weight:bold;
+  font-size:70%;
+  position: absolute;
+  top: 488px;
+  color: rgb(255,255,255);
+  right: 97px;
+}
+
+#navigation
+{
+  position: absolute;
+  top: 478px;
+  color: #184160;
+  right: 25px;
+  width: 74px;
+}
+
+.navigationButton {
+    width:37px;
+    height:40px;
+    float: right;
+	display: block;
+}
+
+.buttonForward { background: url(../common_images/icon_nex.gif) no-repeat 0 0; }
+.buttonForward:hover { background: url(../common_images/icon_nex.gif) no-repeat 0 -40px; }
+.buttonBack { background: url(../common_images/icon_pre.gif) no-repeat 0 0; }
+.buttonBack:hover { background: url(../common_images/icon_pre.gif) no-repeat 0 -40px; }
+.buttonStop { cursor:default; background: url(../common_images/icon_stop.gif) no-repeat 0 0; }
+.buttonExit { background: url(../common_images/icon_exit.gif) no-repeat 0 0; }
+.buttonExit:hover { background: url(../common_images/icon_exit.gif) no-repeat 0 -40px; }
+
+
+#navigation img {border:0; float: left;}
+
+html {
+    overflow:auto;
+	height:100%;
+}
+body
+{
+ /* background-color: #dddddd;*/
+  margin: 0;
+  overflow:auto;
+}
+
+body, td, pre {
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif !important;
+    font-size:100% !important;
+    margin:0px;	
+}
+
+#endMessage {
+    display:none;
+    position:absolute;
+    right:28px;
+    bottom:5px;
+    font-size:85%;
+    border:1px solid #a5c7d7;
+    background-color:#e3f5ff;
+    padding:3px;
+}
+

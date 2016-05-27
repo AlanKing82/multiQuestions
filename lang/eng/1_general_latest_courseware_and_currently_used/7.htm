@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Wide Screen with Image</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><div class="textLong">
+<h1>Wide Screen with Image</h1>
+<p>Easter Island is a tiny isolated island in the Pacific Ocean. Its existence was only discovered by the western world in 1772. A Dutch explorer landed on the island and was shocked to see the few inhabitants living in squalor with very few obvious resources.</p>
+<p>What amazed these European visitors was that amongst this squlaor and barbarism, there was evidence of a once flourishing and sophisticated society. The island was dotted with fabulous giant carved stone heads that indicated an advanced society once existed on the island, who had a detailed knowledge of construction and astronomy.</p>
+</div>
+<img src="../../../media/screen03.jpg" id="wideImgToBg" class="notDisplay" height="226" width="384" />
+<script>// <![CDATA[
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#wideImgToBg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url("'+background+'") no-repeat right bottom');
+    }
+// ]]></script></body>
+</html>

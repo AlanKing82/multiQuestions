@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Sortable iPad - touch-punch - styled elements</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<style><!--
+#incorrect,#correct, .modalWindow #incorrect, .modalWindow #correct {
+    display: none;
+    text-align: left;
+    margin-top:0.5em;
+    font-size:130%;
+    font-weight:bold;
+    padding:0.2em;
+    padding-left:200px;
+    padding-right:0.5em;
+    padding-top:0.2em;
+    background: no-repeat 10px;
+    min-height: 44px;
+	height: auto !important;
+	height: 44px;
+}
+
+
+#incorrect {
+    color:#8B0000;
+
+    background-image: url(../../../media/display_incorrect_bgw.jpg) !important;
+    background-color:transparent !important;
+padding:0px;
+}
+#correct {
+    color:#006400;
+
+    background-image: url(../../../media/display_correct_bgw.jpg) !important;
+    background-color:transparent !important;
+padding:0px;
+}
+
+
+.Submit{
+    background:url(../../../media/input_up.jpg) no-repeat;
+    cursor:pointer;
+    width: 81px;
+    height: 24px;
+    border: none;
+outline: none; /* hide dotted outline in Firefox */
+}
+
+.Submit:active{
+    background:url(../../../media/input_down.jpg) no-repeat;
+    cursor:pointer;
+    width: 81px;
+    height: 24px;
+    border: none;
+
+}
+#sort-list li
+{
+   list-style:none;
+padding-left:0px; 
+   background: url(../../../media/act_bar_middle.png) 0 0em no-repeat;
+    background-color:transparent;
+height:29px;
+width:460px;
+padding:8px 0px 0px 30px;
+margin:0;
+}
+
+
+
+body {
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif !important;
+    font-size:100% !important;
+    padding:0;
+    margin:0;
+    background-color:transparent;
+}
+p{font-size:10pt}
+h1{
+font-size:12pt;
+color:#2D5B6D;
+}
+li{
+font-size:10pt;
+padding:0px 0px 0px 30px;
+color:#ffffff;
+font-weight:bold;
+}
+
+
+
+
+
+
+.textLong, .text, .textRight {
+    background:none;
+    padding:10px;
+    padding-bottom:0;
+}
+--></style>
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+
+
+<div style="padding-top: 10px; padding-left: 10px;" class="ulDesc">
+<h1 style="border: 1px solid red; color: red;">Deprecated, must be back compatible.</h1>
+<p>Can you click and drag them into the correct order?</p>
+<ul id="sort-list">
+<li id="2" class="sort">Lather with liquid soap</li>
+<li id="5" class="sort">Dry hygienically with paper towels or air dryer</li>
+<li id="1" class="sort">Wet hands with comfortably hot water</li>
+<li id="3" class="sort">Clean nails with a nail brush</li>
+<li id="4" class="sort">Rinse thoroughly</li>
+</ul>
+<input value="Submit" class="Submit" type="button" />
+<div class="cleaner"></div>
+</div>
+<div style="padding-top: 30px; padding-left: 65px; font-size: 12pt;" id="correct" class="final_result">Correct.
+<p>Please continue.</p>
+</div>
+<div style="padding-top: 30px; padding-left: 65px; font-size: 12pt;" id="incorrect" class="final_result">Incorrect.
+<p>Try again.</p>
+</div>
+<script language="javascript">// <![CDATA[
+var activity = 1;
+$(document).ready(function() {  
+   var ans_array = new Array()
+    var user_array = new Array()
+self.parent.disable();
+   $(".sort").each(function(i){
+		ans_array[i] = i+1
+		user_array[i] = 0
+	});
+    $("#sort-list").sortable({
+      update : function () {
+	  $(".sort").each(function(j){
+	   user_array[j] = $('li').get(j).id
+$("#incorrect").hide(); 
+	  });
+      }
+
+    });
+function checkSort(){
+		if(ans_array.toString() == user_array.toString()){
+			$("#sort-list").attr('disabled', 'disabled').sortable( "disable" )
+			 $("#correct").show();
+                    
+$("#incorrect").hide();  
+ self.parent.enable();
+		}else{
+
+			 $("#incorrect").show(); 
+		}
+	}  	
+$('.Submit').click(function() {
+		checkSort();
+	});	
+});
+// ]]></script></body>
+</html>

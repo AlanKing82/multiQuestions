@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Radio buttons layout left  - (Apr2015)</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><div id="whiteBoxWrap" class="introFx fx2 width100">
+<div class="whiteBox width50">
+<div class="boxContent">
+<div class="t"></div>
+<h1>Question</h1>
+<p>The computer monitor is on fire.</p>
+<dl class="noteExpand expandMiddle"><dd class="interact_img"></dd><dt>Interact</dt><dd>Click on the radio button below the most suitable extinguisher to use.</dd></dl>
+<ul class="questionsImages">
+<li class="size3" style="position: relative;"><label for="answer1"> <img src="../../../media/question_water.jpg" alt="A water extinguisher." height="124" width="99" />Water<br /></label> <input name="a" title="Click if this is true." class="answer" id="answer1" rel="incorrect" value="on" type="radio" /></li>
+<li class="size3" style="position: relative;"><label for="answer2"> <img src="../../../media/question_foam.jpg" alt="A foam extinguisher." height="124" width="99" />Foam<br /></label> <input name="a" title="Click if this is true." class="answer" id="answer2" rel="incorrect" value="on" type="radio" /></li>
+<li class="size3" style="position: relative;"><label for="answer3"> <img src="../../../media/question_co2.jpg" alt="A carbon dioxide extinguisher." height="124" width="99" />Carbon dioxide<br /></label><input name="a" title="Click if this is true." class="answer" id="answer3" rel="correct" value="on" type="radio" /></li>
+</ul>
+<div class="cleaner"></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<div class="whiteboxFeedback">
+<div class="final_result" id="correct" style="width: 200px; top: 9px; left: 369px;">
+<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
+<span>Correct. </span>A Carbon Dioxide extinguisher is the most suitable choice for use on an electrical fire as it removes the possibility of electrocution.</div>
+<div class="final_result" id="incorrect" style="width: 100px; top: 9px; left: 369px;">
+<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
+<span>Incorrect. </span><br />Try again.</div>
+</div>
+<img src="../../../media/computer_room_fire.jpg" class="introFx fx1" id="bg" alt="A computer monitor on fire." height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;    
+if (parent.$) {        
+    var frame = parent.$("#myFrame").contents();  
+parent.$(".hotspotsMinor a", frame).hotspotMinor();      
+        parent.$('.introFx', frame).introFx({
+            'afterFx': function() {
+                parent.$(".answer", frame).questions(); 
+            }
+        });
+}
+// ]]></script></body>
+</html>

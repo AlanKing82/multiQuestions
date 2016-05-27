@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>checkboxes</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><div class="content">
+<div class="questionIcon"></div>
+<h1 class="withBackground">Three of the following statements are correct.</h1>
+<p class="questionNote">Click on the checkboxes beside the correct statements.</p>
+<img src="../../../media/bottle.png" class="question" height="283" width="108" /> 
+
+<div class="questionBox"> 
+    <ul> 
+        <li><input rel="correct" name="a" title="Click if this is true." id="answer1" class="answer" type="checkbox" /><label for="answer1">When your chair is set at the correct height, your wrists and forearms should be horizontal with the desk and keyboard.</label></li> 
+		<li><input rel="incorrect" name="a" title="Click if this is true." id="answer2" class="answer" type="checkbox" /><label for="answer2">When your chair is set at the correct height, your feet should be resting just above the floor.</label></li> 
+		<li><input rel="correct" name="a" title="Click if this is true." id="answer3" class="answer" type="checkbox" /><label for="answer3">Clutter under the desk can cause you to sit awkwardly.</label></li> 
+		<li><input rel="correct" name="a" title="Click if this is true." id="answer4" class="answer" type="checkbox" /><label for="answer4">The chair's backrest should always support the small of your back to maintain the spine's natural inward curve.</label></li> 
+    </ul> 
+</div>
+<div class="activityFeedback">
+<div id="correct" class="final_result"><span class="i18n _CorrectAnswer">Correct.</span> Please continue.</div> 
+<div id="incorrect" class="final_result"><span class="i18n _IncorrectAnswer">Incorrect.</span> Try again.</div>
+</div>
+<div class="modalWindow"></div> 
+
+</div>
+<script type="text/javascript"> 
+    var activity = 1;
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        parent.$(".answer", frame).questions({'answersCount':'3', 'type': 'modal'});
+    }
+</script></body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Click agree  - (Apr2015)</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<style><!--
+.questionsAgree {
+	POSITION: relative; TEXT-ALIGN: left; BOTTOM: 0px
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div class="introFx fx2 width55" id="whiteBoxWrap">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1>Notice</h1>
+<p>Before proceeding, please read the following:</p>
+<p>If you have a previous injury or currently have an injury or reoccurring physical discomfort, you should consult with your medical provider before performing these exercises.</p>
+<p>If you experience any pain other than a slight creaking of muscles whilst performing these exercises, stop immediately and seek medical advice.</p>
+<p>By using these exercises you agree that you will follow the guidance given.</p>
+<div class="questionsAgree"><input title="Click if you agree." class="answer" id="answer" rel="correct" value="on" type="checkbox" /> <label>I agree</label></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<img src="../../../media/bg_tri.jpg" id="bg" class="introFx fx1" alt="A nurse at a laptop taking notes." height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;
+
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+
+        parent.$('.introFx', frame).introFx({
+            'afterFx': function() {
+                parent.$(".answer", frame).questions();
+            }
+        });
+}
+// ]]></script></body>
+</html>

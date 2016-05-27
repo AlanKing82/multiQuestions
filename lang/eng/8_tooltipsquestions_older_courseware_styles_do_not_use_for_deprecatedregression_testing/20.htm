@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Smaller animations iPad(spritely)</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<style type="text/css"><!--
+#arms {
+	POSITION: absolute; WIDTH: 150px; DISPLAY: block; BACKGROUND: url(../../../media/forearms_seq.jpg) no-repeat 0px 0px; HEIGHT: 130px; TOP: 106px; LEFT: 419px
+}
+#feet {
+	POSITION: absolute; WIDTH: 200px; DISPLAY: block; BACKGROUND: url(../../../media/feet_seq.jpg) no-repeat 0px 0px; HEIGHT: 156px; TOP: 211px; LEFT: 370px
+}
+#head {
+	POSITION: absolute; WIDTH: 140px; DISPLAY: block; BACKGROUND: url(../../../media/head_seq_arrow.jpg) no-repeat 0px 0px; HEIGHT: 66px; TOP: 54px; LEFT: 430px
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div id="arms"></div>
+<div id="feet"></div>
+<div id="head"></div>
+<div id="whiteBoxWrap" class="width50">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1>Smaller animations iPad</h1>
+<p>Once you are sitting back in your chair, you now need to set the chair at the correct height for you. This involves addressing 3 key areas.</p>
+<dl class="noteExpand expandShort"><dd class="interact_img"></dd><dt>Interact</dt><dd>Click on each number for<br />more information.</dd></dl></div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<dl class="icons iconsLight whiteboxFeedback"><dt style="left: 530px; top: 140px;" id="01"><a href="javascript:void(0);" id="icon2"> <span class="fader"> <img src="../../../media/no_01_up.png" /> <img src="../../../media/no_01_hover.gif" class="ImgHover" /> <img src="../../../media/no_01a_down.png" class="ImgDown" /> </span></a></dt><dd style="left: 20px; top: 100px; width: 310px;" class="rounded">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<h2>Forearms and wrists</h2>
+<p>Your chair is at the correct height when your forearms and wrists are horizontal with the keyboard. To achieve this, move your chair close enough to the desk so that you can reach the keyboard comfortably. (Ideally, place the keyboard at least 10cm from the edge of the desk).</p>
+<p>If your chair is equipped with armrests, they must not prevent you from moving close to your desk. Additionally, adjust armrests to ensure that they properly support your forearms and prevent hunching of the shoulders.</p>
+</dd><dt style="left: 465px; top: 330px;" id="02"><a href="javascript:void(0);" id="icon3"> <span class="fader"> <img src="../../../media/no_02_up.png" /> <img src="../../../media/no_02_hover.gif" class="ImgHover" /> <img src="../../../media/no_02a_down.png" class="ImgDown" /> </span></a></dt><dd style="left: 20px; top: 100px; width: 330px;" class="rounded">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<h2>Feet flat on the floor</h2>
+<p>With your arms and wrists in the correct position, check that your feet are flat on the floor.</p>
+<p>If this is not the case, you may be able to adjust the height of your desk or support your feet by using a footrest.</p>
+</dd><dt style="left: 540px; top: 60px;" id="03"><a href="javascript:void(0);" id="icon4"><span class="fader"> <img src="../../../media/no_03_up.png" /> <img src="../../../media/no_03_hover.gif" class="ImgHover" /> <img src="../../../media/no_03a_down.png" class="ImgDown" /> </span></a></dt><dd style="left: 20px; top: 100px; width: 265px;" class="rounded">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<h2>Head position</h2>
+<p>With your forearms and feet in the correct position, adjust the screen so that your eyes are roughly at the same height as the top of the screen.</p>
+<p>Generally, your screen height and angle should allow for a comfortable head position that reduces the need for awkward up and down movements of the head.</p>
+</dd></dl><img src="../../../media/ffh_bg.jpg" alt="A user at an office desk." id="bg" title="A user at an office desk." height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        parent.$(".hotspotsMinor a", frame).hotspotMinor();
+        parent.$('.icons a', frame).icons({'itemsToEnable':'3'});
+
+
+		parent.$(".iconsLight dt", frame).css(
+								{
+						
+								'z-index' : '3',
+								'width' : '40px',
+								'height' : '40px',
+                                                                'display' : 'block'
+								
+                                });
+
+		parent.$(".iconsLight dd", frame).css(
+								{
+								'z-index' : '3'
+								});
+
+
+
+
+
+parent.toggleButton( 'prev', false );
+parent.$( document ).ready(function() {
+parent.$("#bg, #01, #02, #03, #whiteBoxWrap", frame).css({'display' : 'none', 'position' : 'absolute'});
+parent.$("#arms, #head, #feet", frame).hide();
+parent.$("#bg", frame).delay(1000).fadeIn("slow", function(){
+parent.$("#whiteBoxWrap", frame).slideDown("slow", function(){
+parent.$("#01", frame).delay(500).fadeIn("slow", function(){
+parent.toggleButton( 'prev', true);
+});
+});
+});
+});
+
+
+
+
+parent.$("#icon2", frame).click(function(){
+parent.$("#feet", frame).css({'display':'none'});
+parent.$("#arms",frame).show(0, function(){
+parent.$("#arms",frame).sprite({fps: 24, no_of_frames: 19, play_frames: 19});
+parent.$("#02", frame).delay(1200).fadeIn();
+});
+});
+
+
+
+parent.$("#icon3", frame).click(function(){
+parent.$("#feet",frame).show(0, function(){
+parent.$("#feet",frame).sprite({fps: 24, no_of_frames: 11, play_frames: 11});
+parent.$("#03", frame).delay(1200).fadeIn();
+});
+});
+
+
+
+parent.$("#icon4", frame).click(function(){
+parent.$("#head",frame).show(0, function(){
+parent.$("#head",frame).sprite({fps: 24, no_of_frames: 11, play_frames: 11});
+parent.toggleButton( 'prev', true);
+});
+});
+
+
+
+
+
+
+
+}
+// ]]></script>
+<!--OLAS CDT SCREEN UPGRADE: z-index fix for background images in tinymce UI 20150105 16:34:07--></body>
+</html>

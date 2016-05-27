@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Vimeo API - with countdown and forward btn disabled - (Oct 2015)</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/froogaloop2.min.js"></script></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+<p id="timer"><span class="status">&hellip;</span> <span class="clickForward">Please click forward </span> <span class="paused">Paused </span></p>
+<iframe width="665" height="385" id="player1" src="//player.vimeo.com/video/62688256?api=1?api=1&amp;player_id=player1&amp;autoplay=0" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
+<script type="text/javascript">// <![CDATA[
+var activity = 1;
+
+
+
+        if (parent.$) {
+
+
+            var frame = parent.$("#myFrame").contents();
+            parent.$('#player1', frame).vimeoAPI();
+        }
+// ]]></script></body>
+</html>

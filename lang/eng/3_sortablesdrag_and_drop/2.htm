@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>SortTabs - showCorrectAnswers/noOfAttempts/numberStyle/shuffled set - (Aug 2015)</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<script src="../../../SCOFunctions/jquery.min.js" type="text/javascript"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js" type="text/javascript"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js" type="text/javascript"></script></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+
+<div id="whiteBoxWrap" class="introFx fx2 width100">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1 class="width65">showCorrectAnswers/noOfAttempts/numberStyle</h1>
+<p class="width60">We must follow the waste hierarchy when we are using resources.</p>
+<br />
+<div id="sortWrap"><ol id="sort-list">
+<li class="sort">Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
+<li class="sort">Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
+<li class="sort">Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
+<li class="sort">Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
+<li class="sort">Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
+</ol></div>
+<input class="btn" id="sortSubmit" value="submit" type="button" /><dl class="noteExpand expandShort" style="position: absolute; left: 420px; top: 10px;"><dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved? You have 3 attempts.</dd></dl>
+<div class="cleaner"></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<div class="whiteboxFeedback">
+<div id="correct" style="left: 270px; top: 200px; width: 290px;">
+<div class="closeWindow" title="Close">close<span></span></div>
+<span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
+<div id="incorrect" style="left: 270px; top: 200px; width: 160px;">
+<div class="closeWindow" title="Close">close<span></span></div>
+<span>Incorrect.</span><br />Try again. <span class="attemptText">Attempts remaining: </span></div>
+<div id="attemptsOver" style="left: 320px; top: 250px; width: 300px;">
+<div class="closeWindow" title="Close">close<span></span></div>
+<span>You are out of attempts.</span><br /> If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient. <br /><span>Please review screen for correct answers.</span></div>
+</div>
+<div id="sortFrameContainer"></div>
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/question_background.jpg" width="675" height="390" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'numberStyle': true });	
+                }
+            });
+}
+// ]]></script></body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Styled table</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><div class="textLong">
+<h1>Styled table</h1>
+<p class="width70">The following chart will help you decide on the appropriate action in relation to giving/receiving offers of Gifts and Hospitality.</p>
+<table border="0" class="strippedTable">
+<tbody>
+<tr><th>Type of Activity</th><th>Value</th><th>Action Required</th></tr>
+<tr>
+<td>Gift</td>
+<td>Less than &pound;50</td>
+<td>No action required</td>
+</tr>
+<tr>
+<td>Hospitality</td>
+<td>Less than &pound;100</td>
+<td>No action required</td>
+</tr>
+<tr>
+<td>Gift</td>
+<td>More than &pound;50</td>
+<td>Approval from Compliance officer and declared in the Gifts and Hospitality Register</td>
+</tr>
+<tr>
+<td>Hospitality</td>
+<td>More than &pound;100</td>
+<td>Approval from Compliance officer and declared in the Gifts and Hospitality Register</td>
+</tr>
+<tr>
+<td>Gift/Hospitality</td>
+<td>More than &pound;250</td>
+<td>Approval from Compliance officer and declared in the Gifts and Hospitality Register</td>
+</tr>
+</tbody>
+</table>
+</div>
+<img src="../../../media/gift_bg.jpg" id="wideImgToBg" class="notDisplay" height="390" width="305" />
+<script>// <![CDATA[
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#wideImgToBg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url("'+background+'") no-repeat right bottom');
+		parent.$("tr:even", frame).addClass('even');
+		parent.$("tr:odd", frame).addClass('odd');
+}
+// ]]></script></body>
+</html>

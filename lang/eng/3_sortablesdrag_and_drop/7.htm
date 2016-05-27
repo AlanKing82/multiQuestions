@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Sortable iPad - touch-punch</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+
+<div class="ulDesc">
+<p class="pageTitle"><span style="color: #ffffff;"><span style="background-color: #ff0000;">DEPRECATED BUT must be backwards-compatible</span>&nbsp;</span></p>
+<p class="pageTitle">Conflict of Interest &ndash; Reporting Procedure</p>
+<p>Where a conflict of interest cannot be avoided or a circumstance has changed and created a conflict, it must be managed properly. Please place your mouse on&nbsp;the steps below and drag into the correct order.</p>
+<ul id="sort-list">
+<li id="2" class="sort"><b>Notify your manager who will do an initial assessment and refer to compliance</b></li>
+<li id="5" class="sort"><b>Conflict Register</b> - this includes details of actual/perceived/potential conflict; whether the Xchanging company is regulated and feels a breach has occurred, Compliance review register of conflicts monthly to assess risks and ensure conflicts are discharged appropriately</li>
+<li id="1" class="sort"><b>Potential conflict of interest (personal or business) within Xchanging</b></li>
+<li id="3" class="sort"><b>Internal Escalation</b> - dependant of the circumstances compliance may escalate to: Operations Manager, Quality Manager, Regional Quality Manager, Legal Team</li>
+<li id="4" class="sort"><b>External Escalation</b> - where necessary compliance will inform the customer and agree a resolution</li>
+</ul>
+<input value="Submit" class="Submit" type="button" />
+<div class="cleaner"></div>
+</div>
+<div id="correct" class="final_result">
+<p>Correct. Please continue.</p>
+</div>
+<div id="incorrect" class="final_result">
+<p>Incorrect. Please try again</p>
+</div>
+<script language="javascript">// <![CDATA[
+var activity = 1;
+$(document).ready(function() {  
+   var ans_array = new Array()
+    var user_array = new Array()
+ self.parent.disable();
+   $(".sort").each(function(i){
+		ans_array[i] = i+1
+		user_array[i] = 0
+	});
+    $("#sort-list").sortable({
+      update : function () {
+	  $(".sort").each(function(j){
+	   user_array[j] = $('li').get(j).id
+$("#incorrect").hide(); 
+	  });
+      }
+
+    });
+function checkSort(){
+		if(ans_array.toString() == user_array.toString()){
+			$("#sort-list").attr('disabled', 'disabled')
+			 $("#correct").show();
+$("#incorrect").hide();  
+ self.parent.enable();
+		}else{
+
+			 $("#incorrect").show(); 
+		}
+	}  	
+$('.Submit').click(function() {
+		checkSort();
+	});	
+});
+// ]]></script></body>
+</html>

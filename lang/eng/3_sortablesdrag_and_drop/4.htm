@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Sort Image Tabs - (Aug 2015)</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<script src="../../../SCOFunctions/jquery.min.js" type="text/javascript"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js" type="text/javascript"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js" type="text/javascript"></script></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+
+<div class="introFx fx2 width100" id="whiteBoxWrap">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1 class="width50">Who does it affect?</h1>
+<p class="width65">The perception of work at height is that it only affects people who work in industries such as construction or maintenance. However, working from height affects people across all industry sectors.</p>
+<dl class="noteExpand expandShort" style="left: 420px; top: 25px; position: absolute; z-index: 3;"><dd class="interact_img"></dd><dt>Interact</dt><dd>Click and drag the images <br />below into the correct order.</dd></dl>
+<div class="sortWrapImg" id="sortWrap">
+<ul id="sort-list">
+<li class="sort" id="sort4"><img alt="Bales of hay." src="../../../media/industry04.jpg" />
+<p>Agriculture</p>
+</li>
+<li class="sort" id="sort2"><img alt="Children in classroom." src="../../../media/industry02.jpg" />
+<p>Education</p>
+</li>
+<li class="sort" id="sort1"><img alt="Woman with shopping bags." src="../../../media/industry01.jpg" />
+<p>Retail</p>
+</li>
+<li class="sort" id="sort3"><img alt="Doctor's stethoscope." src="../../../media/industry03.jpg" />
+<p>Health Services</p>
+</li>
+</ul>
+</div>
+<div class="sortWrapImg" id="matchWrap">
+<ul id="match-list">
+<li>800 falls reported per year</li>
+<li>600 falls reported per year</li>
+<li>400 falls reported per year</li>
+<li>100 falls reported per year</li>
+</ul>
+</div>
+<input class="btn" id="sortSubmit" type="button" value="submit" />
+<div class="cleaner"></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<div id="sortFrameContainer">
+<div class="whiteboxFeedback">
+<div id="correct" style="width: 300px; top: 200px; left: 115px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>Correct.</span> Yes, installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances. Please continue.</div>
+<div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>Incorrect.</span><br />Try again. <span class="attemptText">Attempts remaining: </span></div>
+<div id="attemptsOver" style="left: 320px; top: 250px; width: 300px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>You are out of attempts.</span><br /> If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient. <br /><span>Please review screen for correct answers.</span></div>
+</div>
+</div>
+<img width="675" height="390" class="introFx fx1" id="bg" alt="Sky above clouds." src="../../../media/question_background.jpg" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+
+    parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true, shuffle: false});
+                }
+            });
+    
+}
+// ]]></script></body>
+</html>

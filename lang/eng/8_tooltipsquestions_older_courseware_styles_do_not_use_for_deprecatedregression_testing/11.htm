@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Multiquestion</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><div class="content"><div class="questionIcon"></div>
+<h1 class="withBackground">Managing Conflicts of Interest</h1>
+
+<div class="width85">
+<p class="questionNote">You are required to act in accordance witd tde following principles at all times</p>
+</div>
+
+<img src="../../../media/bottle.png" class="question" alt="Bottle image" /> 
+<table class="optionsList">
+<tbody>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>
+		<label style="text-align: left">Always</label>
+	</td>
+	<td>
+		<label style="text-align: left">Never</label>
+	</td>
+</tr>
+<tr>
+	<td class="questionNumber">1.</td>
+	<td>
+		<label>Offer, promise or give a financial advantage to anotder person to bring about an improper performance of tdeir relevant functions</label>
+	</td>
+	<td>
+		<input value="on" alt="incorrect" id="answer1-1" class="answer" title="Click if this is true." name="a" type="radio" />
+	</td>
+	<td>
+		<input value="on" alt="correct" id="answer1-2" class="answer" title="Click if this is false." name="a" type="radio" />
+	</td>
+</tr>
+<tr>
+	<td class="questionNumber">2.</td>
+	<td>
+		<label>Report potential conflicts of interest to your manager</label>
+	</td>
+	<td>
+		<input value="on" alt="correct" id="answer2-1" class="answer" title="Click if this is true." name="b" type="radio" />
+	</td>
+	<td>
+		<input value="on" alt="incorrect" id="answer2-2" class="answer" title="Click if this is false." name="b" type="radio" />
+	</td>
+</tr>
+<tr>
+	<td class="questionNumber">3.</td>
+	<td>
+		<label>Request, agree to receive or accept a financial or otder advantage tdat brings about improper performance of your relevant functions</label>
+	</td>
+	<td>
+		<input value="on" alt="incorrect" id="answer3-1" class="answer" title="Click if this is true." name="c" type="radio" />
+	</td>
+	<td>
+		<input value="on" alt="correct" id="answer3-2" class="answer" title="Click if this is false." name="c" type="radio" />
+	</td>
+</tr>
+<tr>
+	<td class="questionNumber">4.</td>
+	<td>
+		<label>Engage in a transaction or enter into a communication witd a tdird party</label>
+	</td>
+	<td>
+		<input value="on" alt="incorrect" id="answer4-1" class="answer" title="Click if this is true." name="d" type="radio" />
+	</td>
+	<td>
+		<input value="on" alt="correct" id="answer4-2" class="answer" title="Click if this is false." name="d" type="radio" />
+	</td>
+</tr>
+<tr>
+	<td class="questionNumber">5.</td>
+	<td>
+		<label>Ensure relevant information is kept confidential</label>
+	</td>
+	<td>
+		<input value="on" alt="correct" id="answer5-1" class="answer" title="Click if this is true." name="e" type="radio" />
+	</td>
+	<td>
+		<input value="on" alt="incorrect" id="answer5-2" class="answer" title="Click if this is false." name="e" type="radio" />
+	</td>
+</tr>
+</tbody>
+</table><div class="activityFeedback">
+<div id="correct" class="final_result"><span class="i18n _CorrectAnswer">Correct.</span> Please continue.</div> 
+<div id="incorrect" class="final_result"><span class="i18n _IncorrectAnswer">Incorrect.</span> Try again.</div><div class="modalWindow"></div> 
+</div>
+<script type="text/javascript">
+
+var activity = 1; 
+
+if (parent.$) { 
+var frame = parent.$("#myFrame").contents(); 
+parent.$(".answer", frame).multiquestions({'answersCount':'5', 'mustBeCorrect':'false'}); 
+
+var i18n_attr = {".questionsList input": "_ClickIfCorrect"}; 
+//parent.$(".i18n", frame).translations({"attr": i18n_attr}); 
+}
+ </script></div><div></div></body>
+</html>

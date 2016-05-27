@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>PASS</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<style><!--
+IMG {
+	FLOAT: left
+}
+.pass{
+	 HEIGHT: 70px;margin:0;margin-top:10px;position:relative;
+
+}
+.pass DT {
+	FLOAT: left;
+
+}
+.pass DD {
+	left:-15px;
+        z-index:4;
+	position:absolute;
+	top:260px;
+
+}
+.deactivated {
+	COLOR: silver
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div style="position: absolute; top: 0px; left: 0px;"><img src="../../../media/pass_01.jpg" title="A red bodied fire extinguisher in front of flames." class="image images" alt="A red bodied fire extinguisher in front of flames." height="386" width="320" /> <img src="../../../media/pass_02.jpg" title="A fire extinguisher pin being removed." class="image images rule1" style="display: none;" alt="A fire extinguisher pin being removed." /> <img src="../../../media/pass_03.jpg" title="An outline of an extinguisher hose directed at the base of a fire." class="image images rule2" style="display: none;" alt="An outline of an extinguisher hose directed at the base of a fire." /> <img src="../../../media/pass_04.jpg" title="Arrows highlighting the handle of an extinguisher." class="image images rule3" style="display: none;" alt="Arrows highlighting the handle of an extinguisher." /> <img src="../../../media/pass_05.jpg" title="Contents of an extinguisher being put on flames." class="image images rule4" style="display: none;" alt="Contents of an extinguisher being put on flames." /></div>
+<div class="whiteBox whiteBoxRight width50">
+<div class="boxContent">
+<div class="t"></div>
+<h1>Fire Extinguisher</h1>
+<p>Use the learning aid &lsquo;PASS&rsquo; to remember the steps involved in using an extinguisher.</p>
+<dl class="noteExpand expandMiddle"><dd class="interact_img"></dd><dt>Interact</dt><dd>Click letters in sequence to view steps.</dd></dl><dl class="pass"><dt><a href="#" class="anchors" id="rule1"> <img src="../../../media/p_up.jpg" title="P" alt="P" rel="../../../media/p_down.jpg" /> </a></dt><dd style="display: none;"></dd><dt><a class="anchors deactivated" id="rule2"> <img src="../../../media/a_down.jpg" title="A" alt="A" rel="../../../media/a_up.jpg" /> </a></dt><dd style="display: none;"></dd><dt><a class="anchors deactivated" id="rule3"> <img src="../../../media/s_down.jpg" title="S" alt="S" rel="../../../media/s_up.jpg" /> </a></dt><dd style="display: none;"></dd><dt><a class="anchors deactivated" id="rule4"> <img src="../../../media/s_down.jpg" title="S" alt="S" rel="../../../media/s_up.jpg" /></a></dt><dd style="display: none;"></dd></dl>
+<p class="boxes rule1" style="display: none;"><b>P</b>ull the pin.</p>
+<p class="boxes rule2" style="display: none;"><b>A</b>im at the base of the fire and stand back six to ten feet.</p>
+<p class="boxes rule3" style="display: none;"><b>S</b>queeze the handle to release the <br />extinguisher&rsquo;s contents.</p>
+<p class="boxes rule4" style="display: none;"><b>S</b>weep the hose from side to side at the base of the fire. As the fire dies at the front, move it back slowly until the fire goes out. Only use an extinguisher if safe to do so and you have been trained in its use.</p>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+<img src="../../../media/pass_bg.jpg" class="notDisplay" id="wideImgToBg" height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+if (parent.$) {
+
+        var frame = parent.$("#myFrame").contents();
+		var background = parent.$('#wideImgToBg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url("'+background+'") no-repeat left bottom');
+		parent.$("#myFrame").css("display", "none");
+		parent.$("#myFrame").delay(800).fadeIn("slow");
+
+
+			var activity = 1;
+            var itemsToEnable = 4;
+            var itemsClicked = 0;
+
+            if (parent.$) {
+                var frame = parent.$("#myFrame").contents();
+
+                parent.$('.deactivated').css('color','red');
+
+                parent.$(".anchors", frame).click( function(){
+                    var classa = parent.$(this).attr('class');
+                    if(classa == 'anchors deactivated')
+                        return false;
+                    else {
+                    var currentId = parent.$(this).attr("id");
+                    hideAll();
+                    parent.$("."+currentId, frame).css("display","block");
+                    parent.$("."+currentId, frame).attr("src",parent.$("."+currentId, frame).attr("src"));
+                    itemsClicked++;
+                    var r = currentId.match(/[\d\.]+/g);
+                    r++;
+                    parent.$('#rule'+r, frame).removeClass('deactivated').attr('href','#');
+                    parent.$('#rule'+r+" img", frame).attr('src',  parent.$('#rule'+r+" img", frame).attr('rel'));
+                    if (itemsClicked >= itemsToEnable) {
+                        parent.enable();
+                    }
+                    }
+		return false;
+                });
+                function hideAll() {
+                    parent.$(".boxes, .images", frame).css("display","none");
+                }
+            }
+            parent.disable();
+			
+			
+}
+// ]]></script></body>
+</html>

@@ -1,0 +1,128 @@
+/* $Rev: 6782 $ $Date: 2015-06-02 17:00:14 +0100 (Tue, 02 Jun 2015) $ $Author: jan $ */
+html {
+    font-family: arial, tahoma;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    background-color: #fff;
+}
+
+#playerContentWrapper {
+	height: 100%;
+}
+
+#lessonFrame {
+    width: 750px;
+    height: 520px;
+}
+
+#laRow.laInactive td a
+{
+    color:gray;
+}
+
+#laRow.laActive td a
+{
+    color:rgb(97, 146, 178);
+}
+
+#laRow.disabled
+{
+    display:none;
+}
+
+#loading-bar
+{
+    background-color:#FFF;
+    border:2px solid #6593cf;
+    color:#036;
+    font:bold 13px tahoma,arial,helvetica;
+    left:50%;
+    margin-left:-100px;
+    margin-top:-50px;
+    padding:15px;
+    position:absolute;
+    text-align:center;
+    top:50%;
+    width:150px;
+    z-index:999;
+}
+
+#container
+{
+    margin:0 auto;
+    width:966px;
+	height: 520px;
+	background-image: url("../common_images/background.jpg");
+}
+
+#courseMenu
+{
+    float:left;
+    height:520px;
+    overflow:hidden;
+    width:210px;
+	font-size: 75%;
+}
+
+#course_menu
+{
+    background-color: transparent;
+    margin-right:5px;
+    padding-left:30px;
+    padding-top:60px;
+    text-align:left;
+}
+
+#courseContent
+{
+    float:right;
+    height:520px;
+    width:750px;
+}
+
+a.menuItem {
+	width: 174px;
+	height: 25px;
+	padding-left: 20px;
+	line-height: 180%;
+	display: block;
+	text-decoration: none;
+	color: rgb(255,255,255);
+}
+
+a.menuItem:hover {
+	text-decoration: underline;
+}
+
+
+a.menuItem span {
+    white-space: nowrap;
+	overflow: visible;
+}
+
+a.menuItem span.disabled {
+	color: #ABABAB;
+}
+
+a.notStarted { background: url(../common_images/menu.png) no-repeat 0 -84px; }
+a.notStarted:hover { background: url(../common_images/menu.png) no-repeat -187px -84px; }
+a.inProgress { background: url(../common_images/menu.png) no-repeat 0 -56px; }
+a.inProgress:hover  { background: url(../common_images/menu.png) no-repeat -187px -56px; }
+a.completed { background: url(../common_images/menu.png) no-repeat 0 0; }
+a.completed:hover { background: url(../common_images/menu.png) no-repeat -187px 0; }
+a.blank { background: url(../common_images/menu.png) no-repeat 0 -28px; }
+a.blank:hover { background: url(../common_images/menu.png) no-repeat -187px -28px; }
+
+.currentItem { 
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	margin-top: -18px;
+	margin-left: 8px;
+	background: url(../common_images/menu_arrow.png) no-repeat 0 0; 
+}
+.goog-te-banner-frame{display:none !important;}
+#playerBody{top:0px !important; margin: 0px !important;}

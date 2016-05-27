@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Textbox left fade In</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><div class="width50" id="whiteBoxWrap">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1>Textbox left fade In</h1>
+<p>Using a computer <span>workstation</span> <span>incorrectly</span> can result in conditions that affect your back, hands, wrists, arms, shoulders and neck. These are known collectively as musculoskeletal disorders (MSDs).</p>
+<p>Conditions can range from a temporary soreness of the limbs to more serious disorders such as tendonitis or carpal tunnel syndrome.</p>
+<p>The more serious MSD conditions are not always immediately apparent but rather build up over a period of time. Aside from being painful, these conditions can take a long time to recover from.</p>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<img src="../../../media/bg_tri.jpg" title="An office worker with back pain." id="bg" alt="An office worker with back pain." height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+var activity = 1;
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+
+parent.disable(true);
+parent.$("#bg, #whiteBoxWrap", frame).css({'display': 'none',
+                                           'position': 'absolute'
+});
+parent.$("#bg", frame).delay(800).fadeIn("slow", function(){
+parent.$("#whiteBoxWrap", frame).slideDown("slow", function(){
+parent.enable(true);
+});
+});
+}
+// ]]></script>
+<!--OLAS CDT SCREEN UPGRADE: z-index fix for background images in tinymce UI 20150105 16:34:07--></body>
+</html>

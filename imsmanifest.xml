@@ -1,0 +1,26 @@
+
+<manifest identifier="MANIFEST-4318e92340cdbad7bb54fa580f6d4883" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+        <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+            <metametadata>
+                <metadatascheme>ADL SCORM 1.2</metadatascheme>
+                <language>en-GB</language>
+            </metametadata>
+        </lom>
+    </metadata>
+    <organizations default="MANIFEST01_ORG1">
+        <organization identifier="MANIFEST01_ORG1">
+            <title>CDTFrame2015 (April 2016)</title>
+            <item identifier="MANIFEST01_ITEM0" identifierref="MANIFEST01_RESOURCE0" isvisible="true" parameters="">
+                <title>CDTFrame2015 (April 2016)</title>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="MANIFEST01_RESOURCE0" type="webcontent" href="index.html?olas2Lesson=1" adlcp:scormtype="sco">
+            <file href="index.html?olas2Lesson=1"/>
+        </resource>
+    </resources>
+</manifest>

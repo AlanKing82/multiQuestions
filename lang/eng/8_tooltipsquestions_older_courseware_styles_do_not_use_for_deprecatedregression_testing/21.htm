@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>multiquestions</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<style><!--
+.optionsList label {
+    padding: 1px;
+    background-color: #f1f6f9;
+    border-radius:5px;
+    font-weight:normal !important;}
+.optionsList label:hover { background-color: #e9f1f3;}
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div id="whiteBoxWrap">
+<div class="whiteBox width60">
+<div class="boxContent">
+<div class="t"></div>
+<h1 class="width80">Test your knowledge</h1>
+<p>Which of the following areas should a risk assessment cover? <br />Select the Yes or No option for each statement. ans:yyyyyny</p>
+<div class="ulDesc">
+<table class="optionsList width100">
+<tbody>
+<tr><th></th><th><label>Yes</label></th><th><label>No</label></th></tr>
+<tr><th><label>The workplace areas and tasks assessed.</label></th><th><input alt="correct" type="radio" id="answer1" class="answer" title="Click if this is true." name="a" /></th><th><input alt="incorrect" type="radio" id="answer1" class="answer" title="Click if this is false." name="a" /></th></tr>
+<tr><th><label>The hazards found.</label></th><th><input alt="correct" type="radio" id="answer2" class="answer" title="Click if this is true." name="b" /></th><th><input alt="incorrect" type="radio" id="answer2" class="answer" title="Click if this is false." name="b" /></th></tr>
+<tr><th><label>The likely risk from the hazards.</label></th><th><input alt="correct" type="radio" id="answer3" class="answer" title="Click if this is true." name="c" /></th><th><input alt="incorrect" type="radio" id="answer3" class="answer" title="Click if this is false." name="c" /></th></tr>
+<tr><th><label>The people at risk.</label></th><th><input alt="correct" type="radio" id="answer4" class="answer" title="Click if this is true." name="d" /></th><th><input alt="incorrect" type="radio" id="answer4" class="answer" title="Click if this is false." name="d" /></th></tr>
+<tr><th><label>The budget in place for health and safety matters.</label></th><th><input alt="incorrect" type="radio" id="answer5" class="answer" title="Click if this is true." name="e" /></th><th><input alt="correct" type="radio" id="answer5" class="answer" title="Click if this is false." name="e" /></th></tr>
+<tr><th><label>The controls put in place to manage the risks.</label></th><th><input alt="correct" type="radio" id="answer6" class="answer" title="Click if this is true." name="f" /></th><th><input alt="incorrect" type="radio" id="answer6" class="answer" title="Click if this is false." name="f" /></th></tr>
+</tbody>
+</table>
+<div class="cleaner"></div>
+</div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<div style="left: 418px; top: 250px; width: 240px; position: absolute;" class="whiteboxFeedback">
+<div id="correct" class="final_result">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<span>Correct.</span><br /> It is also useful to include your risk assessment document in your Health and Safety Policy document.</div>
+<div id="incorrect" class="final_result">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<span>Incorrect.</span><br /> Try again.</div>
+</div>
+<img src="../../../media/bg_tri.jpg" alt="A warehouse with boxes in it." id="bg" title="A warehouse with boxes in it." height="390" width="675" />
+<script type="text/javascript">// <![CDATA[
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+var activity = 1;
+parent.disable(true);
+parent.$(".hotspotsMinor a", frame).hotspotMinor();
+parent.$(".answer", frame).multiquestions({'answersCount':'6', 'mustBeCorrect':false}); 
+parent.$("#bg, #whiteBoxWrap", frame).css({'display': 'none',
+                                           'position': 'absolute',
+                                           'top':'0',
+                                           'left':'0',
+                                           'right':'0'
+                                    });
+
+
+parent.$("#bg", frame).delay(800).fadeIn("slow", function(){
+parent.$("#whiteBoxWrap", frame).slideDown("slow", function(){
+parent.toggleButton( 'prev', true);
+});
+});
+
+}
+// ]]></script>
+<!--OLAS CDT SCREEN UPGRADE: z-index fix for background images in tinymce UI 20150105 16:34:07--></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Vimeo - forward btn disabled - deprecated</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+<script src="https://secure-a.vimeocdn.com/js/froogaloop2.min.js"></script>
+<script src="../../../SCOFunctions/jquery.min.js"></script></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div align="center"><iframe src="https://player.vimeo.com/video/95955826?api=1?api=1&amp;player_id=player1" id="player1" class="vimeo" frameborder="0" height="380" width="665"></iframe></div>
+
+<script type="text/javascript">// <![CDATA[
+if (parent.$) {     
+var frame = parent.$("#myFrame").contents();
+var activity = 1;
+//parent.disable(true);
+parent.toggleButton( 'next', false);
+}
+
+
+parent.$('iframe.vimeo', frame).each(function(){
+ Froogaloop(this).addEvent('ready', ready);
+ });
+
+ function ready(playerID){
+ // Add event listeners
+ 
+ Froogaloop(playerID).addEvent('play', function(data) {play(playerID);});
+ Froogaloop(playerID).addEvent('pause', function(data) {pause(playerID);});
+ Froogaloop(playerID).addEvent('finish', function(data) {finish(playerID);});
+ 
+
+
+ }
+ function play(playerID){
+ //console.log("play");
+ }
+ function pause(playerID){
+ //console.log("paused");
+ 
+ }function finish(playerID){
+ parent.toggleButton( 'next', true);
+ //parent.enable(true);
+ }
+// ]]></script></body>
+</html>

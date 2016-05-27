@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Question</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();"><img src="../../../media/screen12.jpg" /> 
+<div class="text"> 
+    <p>This large fire is spreading quickly.
+        <i>Select one of the correct options to help reduce the supply of oxygen.</i> 
+    </p> 
+    <ul class="questionsImages"> 
+        <li class="size3"> 
+            <label for="answer1"> 
+                Cover with fire blanket<br /><img src="../../../media/screen12-1.jpg" /> 
+            </label> 
+            <input title="Click if this is true." class="answer" id="answer1" rel="incorrect" name="a" type="radio" /> 
+        </li> 
+ 
+        <li class="size3"> 
+            <label for="answer2"> 
+                Close windows<br /><br /><img src="../../../media/screen12-2.jpg" /> 
+            </label> 
+            <input title="Click if this is true." class="answer" id="answer2" rel="correct" name="a" type="radio" /> 
+        </li> 
+ 
+        <li class="size3"> 
+            <label for="answer3"> 
+                Close doors<br /><br /><img src="../../../media/screen12-3.jpg" /> 
+            </label> 
+            <input title="Click if this is true." class="answer" id="answer3" rel="correct" name="a" type="radio" /> 
+        </li> 
+    </ul> 
+    <div class="cleaner"></div> 
+</div> 
+<div class="activityFeedback">
+<div id="correct" class="final_result"><span class="i18n_CorrectAnswer">Correct.</span> Please continue.</div> 
+<div id="incorrect" class="final_result"><span class="i18n_IncorrectAnswer">Incorrect.</span> Try again.</div> 
+<div class="modalWindow"></div>  
+</div>
+<script type="text/javascript"> 
+    var activity = 1;
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        parent.$(".answer", frame).questions();
+ 
+        var i18n_attr = {".questionsImages input": "_ClickIfCorrect" };
+        //parent.$(".i18n", frame).translations({"attr": i18n_attr});
+    }
+</script></body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Blue header question format</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">    <ul class="qNoteLeft qNote width30">
+        <li>
+            <label for="answer1">
+                <img src="../../../media/test_question.jpg" />
+            </label>
+           <input title="Click if this is true." class="answer" id="answer1" rel="incorrect" name="a" type="radio" /><span>30 metres</span>
+        </li>
+
+        <li>
+            <label for="answer2">
+               <img src="../../../media/test_question.jpg" />
+            </label>
+           <input title="Click if this is true." class="answer" id="answer2" rel="correct" name="a" type="radio" /><span>30 metres</span>
+        </li>
+
+        <li class="size1">
+            <label for="answer3">
+               <img src="../../../media/test_question.jpg" />
+            </label>
+          <input title="Click if this is true." class="answer" id="answer3" rel="correct" name="a" type="radio" /><span>30 metres</span>
+        </li>
+    </ul>
+
+<div class="notebookRight">
+<h1 class="blueFadeShort">Blue header question</h1>
+<div class="notebookRightwrapper">
+    <p>
+The law requires that a driver's eyesight meets certain minimum requirements. Which of the distances below is the standard minimum requirement that a driver must be able to read a vehicle registration number plate. 
+    </p>
+
+<dl class="noteExpand expandShort">
+<div class="interact_img"></div>
+  <dt>Interact</dt>
+  <dd>Click on the correct distance.
+  </dd>
+
+</dl>
+	
+	
+<div class="notebookFeedback">
+<div id="correct" class="final_result"><div><span>Correct.</span>To meet the standard minimum requirement, a driver must be able to read a vehicle registration number plate at a distance of 20.5 metres.</div></div>
+<div id="incorrect" class="final_result"><div><span>Incorrect. </span>Try again</div></div>
+</div>		
+
+	
+	
+</div>
+</div>
+
+<img src="../../../media/drivewize_bg_left.jpg" class="notDisplay" id="wideImgToBg" />
+
+
+
+<script type="text/javascript">
+    var activity = 1;
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        parent.$(".answer", frame).questions();
+
+        var background = parent.$('#wideImgToBg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat left bottom');
+    }
+</script></body>
+</html>
