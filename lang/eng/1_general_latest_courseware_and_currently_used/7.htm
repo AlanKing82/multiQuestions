@@ -1,24 +1,186 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-<meta http-equiv="Author" content="EssentialSkillz TM" />
-<meta http-equiv="Description" content="Online training course" />
-<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Wide Screen with Image</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
+    <meta http-equiv="Author" content="EssentialSkillz TM" />
+    <meta http-equiv="Description" content="Online training course" />
+    <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Multiquestions - more than 3 column options - (Apr2016)</title>
+    <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605051448_887aa927d71dd7a8a895ad69a063845d" type="text/css" media="screen" />
 </head>
-<body id="screenBody" onload="parent.onFrameLoad();"><div class="textLong">
-<h1>Wide Screen with Image</h1>
-<p>Easter Island is a tiny isolated island in the Pacific Ocean. Its existence was only discovered by the western world in 1772. A Dutch explorer landed on the island and was shocked to see the few inhabitants living in squalor with very few obvious resources.</p>
-<p>What amazed these European visitors was that amongst this squlaor and barbarism, there was evidence of a once flourishing and sophisticated society. The island was dotted with fabulous giant carved stone heads that indicated an advanced society once existed on the island, who had a detailed knowledge of construction and astronomy.</p>
-</div>
-<img src="../../../media/screen03.jpg" id="wideImgToBg" class="notDisplay" height="226" width="384" />
-<script>// <![CDATA[
-if (parent.$) {
-        var frame = parent.$("#myFrame").contents();
-        var background = parent.$('#wideImgToBg',frame).attr('src');
-        parent.$("body", frame).css('background', '#fff url("'+background+'") no-repeat right bottom');
+
+<style type="text/css">
+    .btn#questionSubmit {
+        position:relative;
+        float:right;
+        margin-right:25px;
+        padding-right:25px;
+        visibility:visible;
+        z-index: 1;
+        background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;
+        background-size: 16px 16px;
+        cursor:pointer;
     }
-// ]]></script></body>
+
+    .btn#questionSubmit:disabled{
+      opacity: 0.65; 
+      cursor: not-allowed;
+      padding-right:14px;
+      margin-right:14px;    
+      background: #ddd;
+      margin-right:25px;
+    }
+</style>
+<body id="screenBody" onload="parent.onFrameLoad();">
+    <div class="introFx fx2  width90" id="whiteBoxWrap">
+        <div class="whiteBox">
+            <div class="boxContent">
+                <div class="t"></div>
+                <h1 class="width80">Who is responsible?</h1>
+                <p class="width95">Some actions are the responsibility of the employer, whilst others are down to you, as you are the one using the PPE. Some responsibilities require you and the employer to co-operate.
+                    <br />For each responsibility listed below, choose who you think is responsible.</p>
+                <div class="ulDesc">
+                    <table class="optionsList width100">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <label>Employer</label>
+                                </th>
+                                <th>
+                                    <label>Employee</label>
+                                </th>
+                                <th>
+                                    <label>Both</label>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Provide PPE that takes account of state of health of wearer.</label>
+                                </th>
+                                <th>
+                                    <input name="a" title="Click if this is correct." class="answer" id="answer1" type="radio" alt="correct" />
+                                </th>
+                                <th>
+                                    <input name="a" title="Click if this is correct." class="answer" id="answer1" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="a" title="Click if this is correct." class="answer" id="answer1" type="radio" alt="incorrect" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Maintain the PPE properly.</label>
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is correct." class="answer" id="answer2" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is correct." class="answer" id="answer2" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is correct." class="answer" id="answer2" type="radio" alt="correct" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Provide PPE that is suitable for the task and hazards.</label>
+                                </th>
+                                <th>
+                                    <input name="c" title="Click if this is correct." class="answer" id="answer3" type="radio" alt="correct" />
+                                </th>
+                                <th>
+                                    <input name="c" title="Click if this is correct." class="answer" id="answer3" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="c" title="Click if this is correct." class="answer" id="answer3" type="radio" alt="incorrect" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Store PPE properly after use.</label>
+                                </th>
+                                <th>
+                                    <input name="d" title="Click if this is correct." class="answer" id="answer4" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="d" title="Click if this is correct." class="answer" id="answer4" type="radio" alt="correct" />
+                                </th>
+                                <th>
+                                    <input name="d" title="Click if this is correct." class="answer" id="answer4" type="radio" alt="incorrect" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Inspect PPE before and after use.</label>
+                                </th>
+                                <th>
+                                    <input name="e" title="Click if this is correct." class="answer" id="answer5" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="e" title="Click if this is correct." class="answer" id="answer5" type="radio" alt="correct" />
+                                </th>
+                                <th>
+                                    <input name="e" title="Click if this is correct." class="answer" id="answer5" type="radio" alt="incorrect" />
+                                </th>
+                            </tr>
+                            <!--
+                            <tr>
+                                <th>
+                                    <label>Ensure PPE is compatible with other PPE in use.</label>
+                                </th>
+                                <th>
+                                    <input name="f" title="Click if this is correct." class="answer" id="answer6" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="f" title="Click if this is correct." class="answer" id="answer6" type="radio" alt="incorrect" />
+                                </th>
+                                <th>
+                                    <input name="f" title="Click if this is correct." class="answer" id="answer6" type="radio" alt="correct" />
+                                </th>
+                            </tr>
+-->
+                        </tbody>
+                    </table>
+                    <div class="cleaner"></div>
+                </div>
+            </div>
+            <div class="b">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="whiteboxFeedback">
+        <div class="final_result" id="correct" style="left: 23px; top: 55px; width: 220px;">
+            <div title="Close" class="closeWindow">close<span></span>
+            </div>
+            <span>Correct.</span> 
+            <br />It is your employer&rsquo;s responsibility to provide PPE, and you must help to keep it working effectively. Please continue.</div>
+        <div class="final_result" id="incorrect" style="left: 23px; top: 55px; width: 85px;">
+            <div title="Close" class="closeWindow">close<span></span>
+            </div>
+            <span>Incorrect.</span> 
+            <br />Try again.</div>
+    </div>
+    <img width="675" height="390" class="introFx fx1" id="bg" alt="Background image" src="../../../media/bg_tri.jpg" />
+    <script type="text/javascript">
+        // <![CDATA[
+        var activity = 1;
+        if (parent.$) {
+            var frame = parent.$("#myFrame").contents();
+
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".answer", frame).multiquestions({
+                        'answersCount': '5',
+                        'mustBeCorrect': true
+                    });
+                }
+            });
+        }
+         // ]]>
+    </script>
+</body>
+
 </html>

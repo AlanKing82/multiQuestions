@@ -9,7 +9,7 @@ var nextLessonButtonAlt = 'Launch next lesson';
 var endMessageAssessment = 'Click to start the %linked%';
 var congratulationLinkedAssessmentHeader = 'Risk Assessment';
 var congratulationLinkedSurveyHeader = 'Survey';
-var noOfScreens = 12;
+var noOfScreens = 8;
 var loadBookmarkText = 'Would you like to go to the last bookmarked screen in this lesson?';
 var currentLessonNo = 1;
 
