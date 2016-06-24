@@ -19,37 +19,36 @@
         
 
         
-.btn#questionSubmit {
-    position:relative;
-    float:right;
-    margin-right:25px;
-    padding-right:25px;
-    visibility:visible;
-    z-index: 1;
+    .btn#questionSubmit {
+        position:relative;
+        float:right;
+        margin:3px 3px 0px 0px;
+/*        padding-right:25px;*/
+        visibility:visible;
+        z-index: 1;
+/*        background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;*/
+        background-size: 16px 16px;
+        cursor:pointer;
+    }
+
+    .btn#questionSubmit:disabled{
+      opacity: 0.65; 
+      cursor: not-allowed;
+      padding-right:14px;
+/*      margin-right:14px;    */
+      background: #ddd;
     
-    background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;
-    background-size: 16px 16px;
-    cursor:pointer;
-}
-        
-.btn#questionSubmit:disabled{
-  opacity: 0.65; 
-  cursor: not-allowed;
-  padding-right:14px;
-  margin-right:14px;    
-  background: #ddd;
-  margin-right:25px;
-}
+    }
     </style>
 </head>
 
 <body id="screenBody" onload="parent.onFrameLoad();">
-    <div class="width60 introFx fx2" id="whiteBoxWrap">
+    <div class="width80 introFx fx2" id="whiteBoxWrap">
         <div class="whiteBox">
             <div class="boxContent">
                 <div class="t"></div>
                 <h1>Question - mustBeCorrect enabled</h1>
-                <p>Which of the following promote sitting correctly?</p>
+                <p>With a submit button incorrect feedback is allowed, submit enables/disables depending on amount of selected answers(2 in this case). boxes uncheck themselves when answered after 1 second incorrectly</p>
                 <dl class="noteExpand expandMiddle">
                     <dd class="interact_img"></dd><dt>Interact</dt>
                     <dd>Click on the checkboxes beside the correct statements. (Hint: 2 are correct)</dd>

@@ -579,17 +579,25 @@ td.questionNumber
 }
 
 /* multiquestion incorrect/correct feedback for more than two option columns */
-.optionsListCorrect{
-    background-color: #f2ffe9;
+.optionsListCorrect,
+.optionsListIncorrect,
+.optionsListReview{
     border-radius: 5px;
 }
 
-.optionsListIncorrect{
-    background-color: #ffe9e9;
-    border-radius: 5px;
-}
+.optionsListCorrect, #whiteBoxWrap .optionsList label.optionsListCorrect{background-color: #f2ffe9}
+.optionsListIncorrect, #whiteBoxWrap .optionsList label.optionsListIncorrect{background-color: #ffe9e9}
+.optionsListReview, #whiteBoxWrap .optionsList label.optionsListReview{background-color: #dbfdc2;}
 
-.optionsListIncorrectImg,.optionsListCorrectImg{
+/*
+#whiteBoxWrap .optionsList label.optionsListCorrect{background-color: #f2ffe9; border: 1px solid #cedbc6}
+#whiteBoxWrap .optionsList label.optionsListIncorrect{background-color: #ffe9e9; border: 1px solid #ab3c3c}
+#whiteBoxWrap .optionsList label.optionsListReview{background-color: #dbfdc2; border: 1px solid #758c63}
+*/
+
+.optionsListIncorrectImg,
+.optionsListCorrectImg,
+.optionsListReviewImg{
 	height:21px;
     width:21px;
     z-index: 1;
@@ -606,6 +614,12 @@ td.questionNumber
 .optionsListIncorrectImg{
     background-image:url(../common_images/x_small.png);
 }
+
+.optionsListReviewImg{
+    background-image:url(../common_images/warning_small.png);
+}
+
+
 
 .bulbs dd
 {

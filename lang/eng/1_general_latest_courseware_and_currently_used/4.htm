@@ -19,27 +19,26 @@
         
 
         
-.btn#questionSubmit {
-    position:relative;
-    float:right;
-    margin-right:25px;
-    padding-right:25px;
-    visibility:visible;
-    z-index: 1;
+    .btn#questionSubmit {
+        position:relative;
+        float:right;
+        margin:3px 3px 0px 0px;
+/*        padding-right:25px;*/
+        visibility:visible;
+        z-index: 1;
+/*        background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;*/
+        background-size: 16px 16px;
+        cursor:pointer;
+    }
+
+    .btn#questionSubmit:disabled{
+      opacity: 0.65; 
+      cursor: not-allowed;
+      padding-right:14px;
+/*      margin-right:14px;    */
+      background: #ddd;
     
-    background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;
-    background-size: 16px 16px;
-    cursor:pointer;
-}
-        
-.btn#questionSubmit:disabled{
-  opacity: 0.65; 
-  cursor: not-allowed;
-  padding-right:14px;
-  margin-right:14px;    
-  background: #ddd;
-  margin-right:25px;
-}
+    }
     </style>
 </head>
 
@@ -49,7 +48,7 @@
             <div class="boxContent">
                 <div class="t"></div>
                 <h1>mustBeCorrect disabled</h1>
-                <p>Which of the following promote sitting correctly?</p>
+                <p>With a submit button incorrect feedback is allowed, submit enables/disables depending on amount of selected answers(3 in this case). User does not need to answer correctly to progress</p>
                 <dl class="noteExpand expandMiddle">
                     <dd class="interact_img"></dd><dt>Interact</dt>
                     <dd>Click on the checkboxes beside the correct statements. (Hint: 3 are correct)</dd>
@@ -86,7 +85,7 @@
     
 
     
-    <div class="whiteboxFeedback" style="left: 380px; top: 300px; width: 200px; position: absolute;">
+    <div class="whiteboxFeedback" style="left: 380px; top: 280px; width: 260px; position: absolute;">
         <div class="final_result" id="correct">
             <div title="Close" class="closeWindow">close<span></span></div>
             <span>Correct.</span>
@@ -94,7 +93,7 @@
         <div class="final_result" id="incorrect">
            <div title="Close" class="closeWindow">close<span></span></div>
            <span>Incorrect.</span>
-            <br />Please continue.</div>
+            <br />Incorrect feedback goes here. Please continue.</div>
     </div>
     <img src="../../../media/question_background.jpg" id="bg" class="introFx fx1" alt="A lit lightbulb." height="390" width="675" />
     <script type="text/javascript">
